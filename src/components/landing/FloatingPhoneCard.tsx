@@ -101,7 +101,7 @@ const FloatingPhoneCard = () => {
                 }}
                 transition={{ 
                   width: { duration: 1.5, delay: 0.8, ease: "easeOut" },
-                  backgroundPosition: { duration: 2, repeat: Infinity, ease: "linear" }
+                  backgroundPosition: { duration: 5, repeat: Infinity, ease: "linear" }
                 }}
                 style={{
                   background: "linear-gradient(90deg, hsl(var(--pink)), hsl(var(--accent)), hsl(var(--yellow)), hsl(var(--pink)))",
