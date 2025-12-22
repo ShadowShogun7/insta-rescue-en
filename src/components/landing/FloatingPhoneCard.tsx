@@ -3,11 +3,11 @@ import { Unlock, Sparkles } from "lucide-react";
 
 const FloatingPhoneCard = () => {
   return (
-    <div className="relative">
+    <div className="relative overflow-visible">
       {/* Spinning background circle */}
-      <div className="absolute inset-0 flex items-center justify-center z-0 overflow-visible">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0">
         <svg
-          className="w-[600px] h-[600px] md:w-[800px] md:h-[800px] slow-spin opacity-30"
+          className="w-[500px] h-[500px] md:w-[700px] md:h-[700px] slow-spin opacity-40"
           viewBox="0 0 200 200"
         >
           <circle
