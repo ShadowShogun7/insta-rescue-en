@@ -235,7 +235,7 @@ const PricingSection = () => {
             <motion.img 
               src={swirlArrow} 
               alt="" 
-              className="absolute -top-4 -right-[130px] w-32 h-auto pointer-events-none"
+              className="absolute top-[4px] -right-[130px] w-32 h-auto pointer-events-none"
               animate={{ y: [0, 6, 0], rotate: [0, 5, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             />
