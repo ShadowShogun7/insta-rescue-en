@@ -2,87 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Neo-brutalist cream background */
+    --background: 45 33% 96%;
+    --foreground: 0 0% 0%;
 
+    /* Cards with white background */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 0%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 0%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Deep purple */
+    --primary: 270 50% 40%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Soft pink */
+    --secondary: 330 70% 75%;
+    --secondary-foreground: 0 0% 0%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted */
+    --muted: 45 20% 90%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Vibrant purple-pink */
+    --accent: 280 60% 55%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Strong black border for neo-brutalist style */
+    --border: 0 0% 0%;
+    --input: 0 0% 0%;
+    --ring: 270 50% 40%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom colors for the design */
+    --cream: 45 33% 96%;
+    --purple-dark: 270 50% 40%;
+    --purple-light: 280 60% 70%;
+    --pink: 330 70% 75%;
+    --pink-light: 330 80% 85%;
+    --yellow: 45 100% 60%;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 0 0% 5%;
+    --foreground: 45 33% 96%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 10%;
+    --card-foreground: 45 33% 96%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 45 33% 96%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 280 60% 60%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 330 50% 40%;
+    --secondary-foreground: 45 33% 96%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 280 60% 55%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 0 0% 100%;
+    --input: 0 0% 20%;
+    --ring: 280 60% 60%;
+
+    --cream: 0 0% 5%;
+    --purple-dark: 280 60% 60%;
+    --purple-light: 280 60% 70%;
+    --pink: 330 50% 50%;
+    --pink-light: 330 60% 60%;
+    --yellow: 45 100% 50%;
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +114,105 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Space Grotesk', 'Noto Sans TC', sans-serif;
+  }
+}
+
+@layer components {
+  /* Neo-brutalist shadow */
+  .neo-shadow {
+    box-shadow: 4px 4px 0px 0px hsl(var(--foreground));
+  }
+  
+  .neo-shadow-lg {
+    box-shadow: 6px 6px 0px 0px hsl(var(--foreground));
+  }
+  
+  .neo-shadow-sm {
+    box-shadow: 2px 2px 0px 0px hsl(var(--foreground));
+  }
+
+  /* Neo-brutalist button */
+  .neo-button {
+    @apply relative font-bold border-2 border-foreground transition-all duration-150;
+    box-shadow: 4px 4px 0px 0px hsl(var(--foreground));
+  }
+  
+  .neo-button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px 0px hsl(var(--foreground));
+  }
+  
+  .neo-button:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0px 0px 0px 0px hsl(var(--foreground));
+  }
+
+  /* Marquee animation */
+  .marquee-track {
+    display: flex;
+    animation: marquee 20s linear infinite;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Slow spin for background circle */
+  .slow-spin {
+    animation: slow-spin 20s linear infinite;
+  }
+  
+  @keyframes slow-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Progress bar fill animation */
+  .progress-fill {
+    animation: progress-fill 2s ease-in-out infinite;
+  }
+  
+  @keyframes progress-fill {
+    0% {
+      width: 0%;
+    }
+    50% {
+      width: 75%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  /* Pulse glow effect */
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  
+  @keyframes pulse-glow {
+    0%, 100% {
+      filter: drop-shadow(0 0 5px hsl(var(--accent)));
+    }
+    50% {
+      filter: drop-shadow(0 0 20px hsl(var(--accent)));
+    }
+  }
+}
+
+@layer utilities {
+  /* Hand-drawn border effect */
+  .hand-drawn-border {
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
   }
 }
