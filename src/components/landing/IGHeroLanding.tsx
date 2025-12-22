@@ -6,6 +6,7 @@ import SocialProofSection from "./SocialProofSection";
 import PainPointsSection from "./PainPointsSection";
 import HowItWorksSection from "./HowItWorksSection";
 import PricingSection from "./PricingSection";
+import FAQSection from "./FAQSection";
 
 const IGHeroLanding = () => {
   return (
@@ -44,6 +45,9 @@ const IGHeroLanding = () => {
 
       {/* Pricing Section */}
       <PricingSection />
+
+      {/* FAQ Section */}
+      <FAQSection />
     </div>
   );
 };
