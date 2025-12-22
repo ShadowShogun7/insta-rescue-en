@@ -326,7 +326,7 @@ const PricingSection = () => {
             <motion.img 
               src={scribbleUnderline} 
               alt="" 
-              className="absolute -bottom-[120px] left-[100px] w-64 h-auto pointer-events-none"
+              className="absolute -bottom-[120px] left-[159px] w-64 h-auto pointer-events-none"
               animate={{ rotate: [-2, 2, -2] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             />
