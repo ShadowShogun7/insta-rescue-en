@@ -5,7 +5,7 @@ const FloatingPhoneCard = () => {
   return (
     <div className="relative">
       {/* Spinning background circle */}
-      <div className="absolute inset-0 flex items-center justify-center -z-10 overflow-visible">
+      <div className="absolute inset-0 flex items-center justify-center z-0 overflow-visible">
         <svg
           className="w-[600px] h-[600px] md:w-[800px] md:h-[800px] slow-spin opacity-30"
           viewBox="0 0 200 200"
