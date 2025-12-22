@@ -241,7 +241,7 @@ const PricingSection = () => {
       </FloatingDoodle>
       
       <FloatingDoodle className="bottom-[180px] left-[8%]" delay={1.8} parallax>
-        <img src={ideaBulb} alt="" className="w-12 h-auto" />
+        <img src={ideaBulb} alt="" className="w-20 h-auto" />
       </FloatingDoodle>
       
       <FloatingDoodle className="bottom-[150px] right-[5%]" delay={2.0}>
