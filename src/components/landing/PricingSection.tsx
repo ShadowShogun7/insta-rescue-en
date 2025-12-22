@@ -1,5 +1,40 @@
 import React from 'react';
-import { motion, Variants } from 'framer-motion';
+import { motion, Variants, useScroll, useTransform } from 'framer-motion';
+
+// --- FLOATING DOODLE WRAPPER WITH CONTINUOUS ANIMATION ---
+const FloatingDoodle = ({ 
+  children, 
+  className, 
+  delay = 0,
+  parallax = false 
+}: { 
+  children: React.ReactNode; 
+  className?: string; 
+  delay?: number;
+  parallax?: boolean;
+}) => {
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 1000], [0, parallax ? 200 : 0]);
+  
+  return (
+    <motion.div
+      style={parallax ? { y } : undefined}
+      animate={{ 
+        y: parallax ? undefined : [0, -15, 0],
+        rotate: [-2, 2, -2] 
+      }}
+      transition={{ 
+        duration: 4, 
+        repeat: Infinity, 
+        delay,
+        ease: "easeInOut"
+      }}
+      className={`absolute pointer-events-none opacity-40 ${className}`}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 // --- HAND-DRAWN SVG ASSETS ---
 const DoodleCheck = () => (
@@ -35,20 +70,20 @@ const DoodleCharacterWithPhone = () => (
     className="absolute -left-24 bottom-10 hidden lg:block z-20"
   >
     {/* Body */}
-    <ellipse cx="90" cy="220" rx="50" ry="55" fill="white" stroke="black" strokeWidth="3"/>
+    <ellipse cx="90" cy="220" rx="50" ry="55" fill="white" stroke="black" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
     
     {/* Head */}
-    <circle cx="90" cy="100" r="55" fill="white" stroke="black" strokeWidth="3"/>
+    <circle cx="90" cy="100" r="55" fill="white" stroke="black" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
     
     {/* Hair tuft */}
-    <path d="M70 50 Q 80 30, 90 45 Q 100 30, 110 50" stroke="black" strokeWidth="3" fill="none" strokeLinecap="round"/>
+    <path d="M70 50 Q 80 30, 90 45 Q 100 30, 110 50" stroke="black" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
     
     {/* Glasses */}
-    <circle cx="70" cy="95" r="22" stroke="black" strokeWidth="3" fill="none"/>
-    <circle cx="110" cy="95" r="22" stroke="black" strokeWidth="3" fill="none"/>
-    <line x1="92" y1="95" x2="88" y2="95" stroke="black" strokeWidth="3"/>
-    <line x1="48" y1="90" x2="40" y2="85" stroke="black" strokeWidth="3"/>
-    <line x1="132" y1="90" x2="140" y2="85" stroke="black" strokeWidth="3"/>
+    <circle cx="70" cy="95" r="22" stroke="black" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+    <circle cx="110" cy="95" r="22" stroke="black" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+    <line x1="92" y1="95" x2="88" y2="95" stroke="black" strokeWidth="3" strokeLinecap="round"/>
+    <line x1="48" y1="90" x2="40" y2="85" stroke="black" strokeWidth="3" strokeLinecap="round"/>
+    <line x1="132" y1="90" x2="140" y2="85" stroke="black" strokeWidth="3" strokeLinecap="round"/>
     
     {/* Eyes behind glasses */}
     <circle cx="70" cy="95" r="6" fill="black"/>
@@ -57,18 +92,18 @@ const DoodleCharacterWithPhone = () => (
     <circle cx="112" cy="93" r="2" fill="white"/>
     
     {/* Smile */}
-    <path d="M75 125 Q 90 140, 105 125" stroke="black" strokeWidth="3" fill="none" strokeLinecap="round"/>
+    <path d="M75 125 Q 90 140, 105 125" stroke="black" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
     
     {/* Left arm holding phone */}
-    <path d="M45 200 Q 20 180, 25 140 Q 28 120, 45 115" stroke="black" strokeWidth="3" fill="none" strokeLinecap="round"/>
+    <path d="M45 200 Q 20 180, 25 140 Q 28 120, 45 115" stroke="black" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
     
     {/* Phone in hand */}
-    <rect x="15" y="110" width="25" height="40" rx="4" fill="white" stroke="black" strokeWidth="2"/>
+    <rect x="15" y="110" width="25" height="40" rx="4" fill="white" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     <rect x="18" y="115" width="19" height="28" rx="2" fill="#E8E8E8" stroke="black" strokeWidth="1"/>
     <circle cx="27.5" cy="147" r="2" stroke="black" strokeWidth="1" fill="none"/>
     
     {/* Right arm waving */}
-    <path d="M135 200 Q 155 185, 150 160" stroke="black" strokeWidth="3" fill="none" strokeLinecap="round"/>
+    <path d="M135 200 Q 155 185, 150 160" stroke="black" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
     
     {/* Hand wave lines */}
     <path d="M155 150 L165 145" stroke="black" strokeWidth="2" strokeLinecap="round"/>
@@ -87,9 +122,9 @@ const DoodleHandLeft = () => (
     className="absolute -left-28 top-1/3 hidden lg:block z-20"
   >
     {/* Arm */}
-    <path d="M5 40 Q 30 35, 50 40" stroke="black" strokeWidth="4" fill="none" strokeLinecap="round"/>
+    <path d="M5 40 Q 30 35, 50 40" stroke="black" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
     {/* Hand */}
-    <ellipse cx="60" cy="40" rx="15" ry="12" fill="white" stroke="black" strokeWidth="3"/>
+    <ellipse cx="60" cy="40" rx="15" ry="12" fill="white" stroke="black" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
     {/* Pointing finger */}
     <path d="M75 40 L 115 40" stroke="black" strokeWidth="4" strokeLinecap="round"/>
     {/* Arrow tip */}
@@ -108,13 +143,13 @@ const DoodleHandRight = () => (
     className="absolute -right-20 top-1/2 -translate-y-1/2 hidden lg:block z-20"
   >
     {/* Decorative curve */}
-    <path d="M130 20 Q 140 60, 130 100" stroke="black" strokeWidth="3" fill="none" strokeLinecap="round"/>
+    <path d="M130 20 Q 140 60, 130 100" stroke="black" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
     
     {/* Arm */}
-    <path d="M130 60 Q 100 55, 80 60" stroke="black" strokeWidth="4" fill="none" strokeLinecap="round"/>
+    <path d="M130 60 Q 100 55, 80 60" stroke="black" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
     
     {/* Hand */}
-    <ellipse cx="65" cy="60" rx="18" ry="14" fill="white" stroke="black" strokeWidth="3"/>
+    <ellipse cx="65" cy="60" rx="18" ry="14" fill="white" stroke="black" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
     
     {/* Pointing finger */}
     <path d="M47 60 L 10 60" stroke="black" strokeWidth="4" strokeLinecap="round"/>
@@ -128,39 +163,68 @@ const DoodleHandRight = () => (
   </motion.svg>
 );
 
-// Floating sparkle/star decorations
-const FloatingSparkle = ({ className, delay = 0, size = 24 }: { className?: string; delay?: number; size?: number }) => (
-  <motion.svg
-    initial={{ opacity: 0, scale: 0 }}
-    whileInView={{ opacity: 1, scale: 1 }}
-    transition={{ delay, duration: 0.4, type: "spring" }}
-    viewport={{ once: true }}
-    width={size} height={size} viewBox="0 0 24 24" fill="none"
-    className={className}
-  >
+// Accurate 5-point star
+const FivePointStar = ({ className, size = 60 }: { className?: string; size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 100 100" fill="none" className={className}>
     <path 
-      d="M12 2L14 10L22 12L14 14L12 22L10 14L2 12L10 10L12 2Z" 
-      fill="black"
+      d="M50 15 L58 38 L82 38 L63 54 L71 78 L50 63 L29 78 L37 54 L18 38 L42 38 Z" 
+      stroke="black" 
+      strokeWidth="4" 
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
-  </motion.svg>
+  </svg>
 );
 
-const FloatingStar = ({ className, delay = 0, size = 32 }: { className?: string; delay?: number; size?: number }) => (
-  <motion.svg
-    initial={{ opacity: 0, rotate: -45 }}
-    whileInView={{ opacity: 1, rotate: 0 }}
-    transition={{ delay, duration: 0.5, type: "spring" }}
-    viewport={{ once: true }}
-    width={size} height={size} viewBox="0 0 32 32" fill="none"
-    className={className}
-  >
+// Yellow-filled sparkle
+const YellowSparkle = ({ className, size = 40 }: { className?: string; size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 100 100" fill="none" className={className}>
     <path 
-      d="M16 2L18.5 12.5L29 16L18.5 19.5L16 30L13.5 19.5L3 16L13.5 12.5L16 2Z" 
+      d="M50 10 Q50 50 90 50 Q50 50 50 90 Q50 50 10 50 Q50 50 50 10" 
+      fill="#FBBF24" 
       stroke="black" 
-      strokeWidth="2" 
-      fill="none"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
-  </motion.svg>
+  </svg>
+);
+
+// Purple spiral arrow
+const PurpleSpiralArrow = ({ className }: { className?: string }) => (
+  <svg width="100" height="100" viewBox="0 0 100 100" fill="none" className={className}>
+    <path 
+      d="M20 80 Q40 20 80 30" 
+      stroke="#9333EA" 
+      strokeWidth="4" 
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path 
+      d="M70 15 L85 30 L70 45" 
+      stroke="#9333EA" 
+      strokeWidth="4" 
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+// Wobbly marker underline for prices
+const WobblyUnderline = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 200 20" fill="none">
+    <path 
+      d="M10 15 Q30 8 50 12 Q70 16 90 10 Q110 4 130 12 Q150 18 170 10 Q190 5 195 12" 
+      stroke="#9333EA" 
+      strokeWidth="3" 
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
 );
 
 // Title underline squiggle
@@ -176,11 +240,12 @@ const TitleUnderline = () => (
       strokeWidth="3" 
       fill="none" 
       strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
 
-// Curved arrow decoration near title
+// Curved arrow decoration near title - NOW PURPLE
 const CurvedArrow = () => (
   <motion.svg 
     initial={{ opacity: 0, scale: 0.8 }}
@@ -193,14 +258,15 @@ const CurvedArrow = () => (
   >
     <path 
       d="M15 50 Q 20 20, 50 15 Q 65 12, 70 25" 
-      stroke="black" 
+      stroke="#9333EA" 
       strokeWidth="3" 
       fill="none" 
       strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path 
       d="M62 18 L70 25 L63 32" 
-      stroke="black" 
+      stroke="#9333EA" 
       strokeWidth="3" 
       fill="none" 
       strokeLinecap="round" 
@@ -248,24 +314,48 @@ const PricingSection = () => {
 
   return (
     <section className="py-24 bg-neo-cream relative overflow-hidden">
-      {/* Floating Background Star Pattern */}
-      <div className="absolute inset-0 pointer-events-none opacity-20">
+      {/* Background Star Pattern with increased opacity */}
+      <div className="absolute inset-0 pointer-events-none opacity-30">
         <svg width="100%" height="100%">
           <pattern id="star-pattern" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
-            <path d="M60 15L65 45L95 45L70 65L80 95L60 75L40 95L50 65L25 45L55 45Z" fill="none" stroke="black" strokeWidth="1.5" transform="scale(0.4)"/>
+            <path d="M50 15 L58 38 L82 38 L63 54 L71 78 L50 63 L29 78 L37 54 L18 38 L42 38 Z" fill="none" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" transform="scale(0.35)"/>
           </pattern>
           <rect x="0" y="0" width="100%" height="100%" fill="url(#star-pattern)" />
         </svg>
       </div>
 
-      {/* Floating Sparkle Decorations */}
-      <FloatingSparkle className="absolute top-20 right-[15%]" delay={0.2} size={20} />
-      <FloatingSparkle className="absolute top-32 left-[10%]" delay={0.4} size={16} />
-      <FloatingStar className="absolute top-16 right-[25%]" delay={0.3} size={28} />
-      <FloatingStar className="absolute bottom-32 left-[8%]" delay={0.6} size={24} />
-      <FloatingSparkle className="absolute bottom-40 right-[12%]" delay={0.5} size={18} />
-      <FloatingStar className="absolute top-1/2 right-[5%]" delay={0.7} size={22} />
-      <FloatingSparkle className="absolute top-1/3 left-[5%]" delay={0.35} size={14} />
+      {/* Floating Doodle Decorations with Parallax */}
+      <FloatingDoodle className="top-10 left-[10%]" delay={0.5} parallax>
+        <FivePointStar size={60} />
+      </FloatingDoodle>
+      
+      <FloatingDoodle className="top-40 right-[5%]" delay={1.2}>
+        <PurpleSpiralArrow />
+      </FloatingDoodle>
+      
+      <FloatingDoodle className="bottom-20 left-[15%]" delay={2}>
+        <YellowSparkle size={45} />
+      </FloatingDoodle>
+      
+      <FloatingDoodle className="top-20 right-[20%]" delay={0.3} parallax>
+        <FivePointStar size={40} />
+      </FloatingDoodle>
+      
+      <FloatingDoodle className="bottom-32 right-[8%]" delay={1.5}>
+        <YellowSparkle size={35} />
+      </FloatingDoodle>
+      
+      <FloatingDoodle className="top-1/3 left-[3%]" delay={0.8} parallax>
+        <FivePointStar size={50} />
+      </FloatingDoodle>
+      
+      <FloatingDoodle className="top-1/2 right-[3%]" delay={1.8}>
+        <PurpleSpiralArrow className="rotate-45" />
+      </FloatingDoodle>
+      
+      <FloatingDoodle className="bottom-40 left-[25%]" delay={2.5}>
+        <FivePointStar size={35} />
+      </FloatingDoodle>
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <motion.div 
@@ -297,9 +387,10 @@ const PricingSection = () => {
                 <h3 className="text-3xl font-black text-white tracking-wider">實戰手冊</h3>
               </div>
               <div className="p-10 text-center bg-neo-cream">
-                <div className="mb-8">
+                <div className="mb-8 relative inline-block">
                   <h4 className="text-5xl md:text-6xl font-black mb-2 tracking-tight">NTD$1980</h4>
-                  <p className="text-xl md:text-2xl font-bold text-muted-foreground">HKD$558</p>
+                  <WobblyUnderline className="absolute -bottom-1 left-0 w-full h-4" />
+                  <p className="text-xl md:text-2xl font-bold text-muted-foreground mt-4">HKD$558</p>
                 </div>
                 <ul className="text-left space-y-4 mb-10 inline-block">
                   {plan1Features.map((feature, index) => (
@@ -324,9 +415,10 @@ const PricingSection = () => {
                 <h3 className="text-3xl font-black text-white tracking-wider">Meta特殊通道專案</h3>
               </div>
               <div className="p-10 text-center bg-neo-cream">
-                <div className="mb-8">
+                <div className="mb-8 relative inline-block">
                   <h4 className="text-5xl md:text-6xl font-black mb-2 tracking-tight">USD$4000起</h4>
-                  <p className="text-xl md:text-2xl font-bold text-muted-foreground">手續費USD$100</p>
+                  <WobblyUnderline className="absolute -bottom-1 left-0 w-full h-4" />
+                  <p className="text-xl md:text-2xl font-bold text-muted-foreground mt-4">手續費USD$100</p>
                 </div>
                 <ul className="text-left space-y-4 mb-10 inline-block">
                   {plan2Features.map((feature, index) => (
