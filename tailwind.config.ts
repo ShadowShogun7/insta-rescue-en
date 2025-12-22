@@ -56,6 +56,12 @@ export default {
         pink: "hsl(var(--pink))",
         "pink-light": "hsl(var(--pink-light))",
         yellow: "hsl(var(--yellow))",
+        "neo-yellow": "hsl(var(--neo-yellow))",
+        "neo-pink": "hsl(var(--neo-pink))",
+        "neo-mint": "hsl(var(--neo-mint))",
+        "neo-lavender": "hsl(var(--neo-lavender))",
+        "neo-coral": "hsl(var(--neo-coral))",
+        "neo-green": "hsl(var(--neo-green))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
