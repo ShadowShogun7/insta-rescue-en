@@ -10,7 +10,7 @@ import FAQSection from "./FAQSection";
 
 const IGHeroLanding = () => {
   return (
-    <div className="min-h-screen bg-background overflow-hidden">
+    <div className="min-h-screen bg-background">
       {/* Navigation */}
       <HeroNavigation />
 
