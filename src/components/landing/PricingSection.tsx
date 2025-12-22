@@ -229,17 +229,16 @@ const PricingSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16 relative inline-block w-full"
         >
-          {/* Swirl Arrow pointing to title */}
-          <motion.img 
-            src={swirlArrow} 
-            alt="" 
-            className="absolute -top-8 -right-4 md:right-1/4 w-16 h-auto pointer-events-none"
-            animate={{ y: [0, 6, 0], rotate: [0, 5, 0] }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-          />
-          
           <h2 className="text-5xl font-black inline-block relative z-10">
             方案詳情
+            {/* Swirl Arrow - right of title */}
+            <motion.img 
+              src={swirlArrow} 
+              alt="" 
+              className="absolute -top-4 -right-20 w-32 h-auto pointer-events-none"
+              animate={{ y: [0, 6, 0], rotate: [0, 5, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            />
             <TitleUnderline />
           </h2>
         </motion.div>
