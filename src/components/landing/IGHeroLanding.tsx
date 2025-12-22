@@ -2,6 +2,9 @@ import HeroNavigation from "./HeroNavigation";
 import HeroContent from "./HeroContent";
 import FloatingPhoneCard from "./FloatingPhoneCard";
 import MarqueeTrustBar from "./MarqueeTrustBar";
+import SocialProofSection from "./SocialProofSection";
+import PainPointsSection from "./PainPointsSection";
+import HowItWorksSection from "./HowItWorksSection";
 
 const IGHeroLanding = () => {
   return (
@@ -28,6 +31,15 @@ const IGHeroLanding = () => {
       <div className="mt-12 md:mt-20">
         <MarqueeTrustBar />
       </div>
+
+      {/* Social Proof Section */}
+      <SocialProofSection />
+
+      {/* Pain Points Section */}
+      <PainPointsSection />
+
+      {/* How It Works Section */}
+      <HowItWorksSection />
     </div>
   );
 };
