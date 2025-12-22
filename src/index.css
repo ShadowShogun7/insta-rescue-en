@@ -241,4 +241,9 @@
   .hand-drawn-border {
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
   }
+  
+  /* Radial gradient utility */
+  .bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
+  }
 }
