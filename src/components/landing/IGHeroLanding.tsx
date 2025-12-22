@@ -8,6 +8,8 @@ import HowItWorksSection from "./HowItWorksSection";
 import PricingSection from "./PricingSection";
 import FAQSection from "./FAQSection";
 import VideoTestimonialSection from "./VideoTestimonialSection";
+import ChatWidget from "@/components/chat/ChatWidget";
+
 const IGHeroLanding = () => {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
@@ -51,6 +53,9 @@ const IGHeroLanding = () => {
 
       {/* Video Testimonial Section */}
       <VideoTestimonialSection />
+
+      {/* Live Chat Widget */}
+      <ChatWidget />
     </div>
   );
 };
