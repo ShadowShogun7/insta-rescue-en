@@ -93,10 +93,20 @@ const FloatingPhoneCard = () => {
             {/* Progress bar */}
             <div className="h-4 rounded-full bg-muted border-2 border-foreground overflow-hidden">
               <motion.div
-                className="h-full bg-gradient-to-r from-pink to-accent rounded-full"
+                className="h-full rounded-full"
                 initial={{ width: "0%" }}
-                animate={{ width: "75%" }}
-                transition={{ duration: 1.5, delay: 0.8, ease: "easeOut" }}
+                animate={{ 
+                  width: "75%",
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+                }}
+                transition={{ 
+                  width: { duration: 1.5, delay: 0.8, ease: "easeOut" },
+                  backgroundPosition: { duration: 2, repeat: Infinity, ease: "linear" }
+                }}
+                style={{
+                  background: "linear-gradient(90deg, hsl(var(--pink)), hsl(var(--accent)), hsl(var(--yellow)), hsl(var(--pink)))",
+                  backgroundSize: "300% 100%"
+                }}
               />
             </div>
 
