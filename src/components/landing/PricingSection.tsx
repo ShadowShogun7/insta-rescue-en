@@ -201,7 +201,7 @@ const PricingSection = () => {
         <FivePointStar size={40} />
       </FloatingDoodle>
       
-      <FloatingDoodle className="bottom-32 right-[8%]" delay={1.5}>
+      <FloatingDoodle className="bottom-[228px] right-[3%]" delay={1.5}>
         <YellowSparkle size={35} />
       </FloatingDoodle>
       
