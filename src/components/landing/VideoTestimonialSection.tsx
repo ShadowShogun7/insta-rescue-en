@@ -70,11 +70,11 @@ const VideoTestimonial = ({ videoUrl, name, delay }: VideoTestimonialProps) => {
 const VideoTestimonialSection = () => {
   const testimonials = [
     { name: "用戶成功回饋 A", url: "/videos/testimonial-1.mp4" },
-    { name: "用戶成功回饋 B", url: "/videos/testimonial-1.mp4" },
-    { name: "用戶成功回饋 C", url: "/videos/testimonial-1.mp4" },
-    { name: "用戶成功回饋 D", url: "/videos/testimonial-1.mp4" },
-    { name: "用戶成功回饋 E", url: "/videos/testimonial-1.mp4" },
-    { name: "用戶成功回饋 F", url: "/videos/testimonial-1.mp4" },
+    { name: "用戶成功回饋 B", url: "/videos/testimonial-2.mp4" },
+    { name: "用戶成功回饋 C", url: "/videos/testimonial-3.mp4" },
+    { name: "用戶成功回饋 D", url: "/videos/testimonial-4.mp4" },
+    { name: "用戶成功回饋 E", url: "/videos/testimonial-5.mp4" },
+    { name: "用戶成功回饋 F", url: "/videos/testimonial-6.mp4" },
   ];
 
   return (
