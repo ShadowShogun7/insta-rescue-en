@@ -253,11 +253,11 @@ const PricingSection = () => {
         >
           {/* --- PLAN 1 CARD: 實戰手冊 --- */}
           <motion.div variants={cardVariants} className="relative group z-10">
-            {/* Peeking Guy - behind card */}
+            {/* Peeking Guy - aligned to card left edge */}
             <motion.img 
               src={peekingGuy} 
               alt="" 
-              className="absolute -top-16 -left-20 w-32 h-auto z-0 pointer-events-none"
+              className="absolute -top-16 left-0 w-32 h-auto z-0 pointer-events-none"
               animate={{ y: [0, -8, 0], rotate: [-3, 3, -3] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             />
