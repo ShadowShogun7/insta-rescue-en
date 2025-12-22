@@ -244,7 +244,7 @@ const PricingSection = () => {
         <img src={ideaBulb} alt="" className="w-20 h-auto" />
       </FloatingDoodle>
       
-      <FloatingDoodle className="bottom-[150px] right-[5%]" delay={2.0}>
+      <FloatingDoodle className="bottom-[100px] right-[5%]" delay={2.0}>
         <img src={sparklesA} alt="" className="w-24 h-auto" />
       </FloatingDoodle>
       
