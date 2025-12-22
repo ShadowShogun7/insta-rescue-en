@@ -47,9 +47,7 @@ const HeroContent = () => {
         transition={{ duration: 0.5, delay: 0.4 }}
         className="text-lg md:text-xl text-muted-foreground max-w-md"
       >
-        專業團隊協助您快速解封 IG 帳號，
-        <br />
-        恢復您的社群影響力！
+        找回被停用的IG賬號 – 完整戰略手冊
       </motion.p>
 
       {/* CTA Button + Trust Rating Badge Stack */}
