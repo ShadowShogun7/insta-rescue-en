@@ -5,6 +5,7 @@ import MarqueeTrustBar from "./MarqueeTrustBar";
 import SocialProofSection from "./SocialProofSection";
 import PainPointsSection from "./PainPointsSection";
 import HowItWorksSection from "./HowItWorksSection";
+import PricingSection from "./PricingSection";
 
 const IGHeroLanding = () => {
   return (
@@ -40,6 +41,9 @@ const IGHeroLanding = () => {
 
       {/* How It Works Section */}
       <HowItWorksSection />
+
+      {/* Pricing Section */}
+      <PricingSection />
     </div>
   );
 };
