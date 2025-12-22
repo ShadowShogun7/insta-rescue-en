@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useState, useRef } from 'react';
 
 interface VideoTestimonialProps {
   videoUrl: string;
@@ -6,49 +7,65 @@ interface VideoTestimonialProps {
   delay: number;
 }
 
-const VideoTestimonial = ({ videoUrl, name, delay }: VideoTestimonialProps) => (
-  <motion.div 
-    initial={{ opacity: 0, y: 50, rotate: -2 }}
-    whileInView={{ opacity: 1, y: 0, rotate: 0 }}
-    transition={{ delay, duration: 0.6 }}
-    viewport={{ once: true }}
-    whileHover={{ scale: 1.02, rotate: 1 }}
-    className="relative group cursor-pointer"
-  >
-    {/* Neo-brutalist Card Frame */}
-    <div className="bg-card border-4 border-foreground rounded-[2.5rem] p-3 shadow-[12px_12px_0px_0px_hsl(var(--foreground))] group-hover:shadow-[16px_16px_0px_0px_hsl(var(--foreground))] transition-all overflow-hidden">
-      <div className="aspect-[9/16] bg-muted rounded-[2rem] overflow-hidden relative">
-        {/* Placeholder for Video */}
-        <video 
-          src={videoUrl} 
-          className="w-full h-full object-cover" 
-          loop 
-          muted 
-          playsInline 
-          onMouseOver={e => (e.target as HTMLVideoElement).play()}
-          onMouseOut={e => (e.target as HTMLVideoElement).pause()}
-        />
-        {/* Play Icon Doodle Overlay */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-          <svg width="80" height="80" viewBox="0 0 100 100">
-            <path d="M30,20 L80,50 L30,80 Z" fill="hsl(var(--primary))" stroke="hsl(var(--foreground))" strokeWidth="4" strokeLinejoin="round" />
-          </svg>
-        </div>
-      </div>
-      <div className="pt-4 pb-2 px-4 text-center">
-        <h4 className="font-black text-lg text-foreground">{name}</h4>
-        <div className="flex justify-center mt-1">
-          {/* Doodle Stars */}
-          {[...Array(5)].map((_, i) => (
-            <svg key={i} width="20" height="20" viewBox="0 0 24 24" className="text-primary">
-              <path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z" fill="currentColor" stroke="hsl(var(--foreground))" strokeWidth="1.5" />
+const VideoTestimonial = ({ videoUrl, name, delay }: VideoTestimonialProps) => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
+  return (
+    <motion.div 
+      initial={{ opacity: 0, y: 50, rotate: -2 }}
+      whileInView={{ opacity: 1, y: 0, rotate: 0 }}
+      transition={{ delay, duration: 0.6 }}
+      viewport={{ once: true }}
+      whileHover={{ scale: 1.02, rotate: 1 }}
+      className="relative group cursor-pointer"
+      onClick={togglePlay}
+    >
+      {/* Neo-brutalist Card Frame */}
+      <div className="bg-card border-4 border-foreground rounded-[2.5rem] p-3 shadow-[12px_12px_0px_0px_hsl(var(--foreground))] group-hover:shadow-[16px_16px_0px_0px_hsl(var(--foreground))] transition-all overflow-hidden">
+        <div className="aspect-[9/16] bg-muted rounded-[2rem] overflow-hidden relative">
+          {/* Video */}
+          <video 
+            ref={videoRef}
+            src={videoUrl} 
+            className="w-full h-full object-cover" 
+            loop 
+            playsInline
+            onEnded={() => setIsPlaying(false)}
+          />
+          {/* Play/Pause Icon Overlay */}
+          <div className={`absolute inset-0 flex items-center justify-center transition-opacity pointer-events-none ${isPlaying ? 'opacity-0' : 'opacity-100'}`}>
+            <svg width="80" height="80" viewBox="0 0 100 100">
+              <path d="M30,20 L80,50 L30,80 Z" fill="hsl(var(--primary))" stroke="hsl(var(--foreground))" strokeWidth="4" strokeLinejoin="round" />
             </svg>
-          ))}
+          </div>
+        </div>
+        <div className="pt-4 pb-2 px-4 text-center">
+          <h4 className="font-black text-lg text-foreground">{name}</h4>
+          <div className="flex justify-center mt-1">
+            {/* Doodle Stars */}
+            {[...Array(5)].map((_, i) => (
+              <svg key={i} width="20" height="20" viewBox="0 0 24 24" className="text-primary">
+                <path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z" fill="currentColor" stroke="hsl(var(--foreground))" strokeWidth="1.5" />
+              </svg>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
-  </motion.div>
-);
+    </motion.div>
+  );
+};
 
 const VideoTestimonialSection = () => {
   const testimonials = [
