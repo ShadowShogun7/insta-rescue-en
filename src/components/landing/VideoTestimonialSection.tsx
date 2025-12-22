@@ -51,8 +51,10 @@ const VideoTestimonial = ({ videoUrl, name, delay }: VideoTestimonialProps) => (
 );
 
 const VideoTestimonialSection = () => {
+  const realVideoUrl = "https://www.ig-hero.com/wp-content/uploads/2025/12/%E5%AE%A2%E6%88%B6%E6%A1%88%E4%BE%8B-ig%E8%A2%AB%E9%8E%96%E5%B8%B3-10%E5%B9%B4%E5%9B%9E%E6%86%B6%E5%B7%AE%E9%BB%9E%E6%B6%88%E5%A4%B1-1.mp4";
+  
   const testimonials = [
-    { name: "用戶成功回饋 A", url: "#" },
+    { name: "IG被鎖帳成功救回", url: realVideoUrl },
     { name: "用戶成功回饋 B", url: "#" },
     { name: "用戶成功回饋 C", url: "#" },
     { name: "用戶成功回饋 D", url: "#" },
