@@ -6,6 +6,11 @@ import swirlArrow from "@/assets/doodles/swirl_arrow_down1.png";
 import scribbleUnderline from "@/assets/doodles/scribble_underline.png";
 import pointingHandLeft from "@/assets/doodles/pointing_hand_left.png";
 import peekingGuy from "@/assets/doodles/peeking_guy.png";
+import sparkleOutline from "@/assets/doodles/sparkle_outline.png";
+import loopSwirl from "@/assets/doodles/loop_swirl.png";
+import starOutline from "@/assets/doodles/star_outline.png";
+import ideaBulb from "@/assets/doodles/idea_bulb.png";
+import sparklesA from "@/assets/doodles/sparkles_A.png";
 
 // --- FLOATING DOODLE WRAPPER WITH CONTINUOUS ANIMATION ---
 const FloatingDoodle = ({ 
@@ -221,7 +226,31 @@ const PricingSection = () => {
       <FloatingDoodle className="top-2/3 left-[5%]" delay={2.2} parallax>
         <DoodleSpiral className="-rotate-30" />
       </FloatingDoodle>
-
+      
+      {/* New PNG Doodles around pricing cards */}
+      <FloatingDoodle className="top-[180px] left-[5%]" delay={0.4}>
+        <img src={sparkleOutline} alt="" className="w-16 h-auto" />
+      </FloatingDoodle>
+      
+      <FloatingDoodle className="top-[120px] right-[8%]" delay={0.9} parallax>
+        <img src={starOutline} alt="" className="w-14 h-auto" />
+      </FloatingDoodle>
+      
+      <FloatingDoodle className="top-[60px] left-[45%]" delay={1.2}>
+        <img src={loopSwirl} alt="" className="w-20 h-auto" />
+      </FloatingDoodle>
+      
+      <FloatingDoodle className="bottom-[180px] left-[8%]" delay={1.8} parallax>
+        <img src={ideaBulb} alt="" className="w-12 h-auto" />
+      </FloatingDoodle>
+      
+      <FloatingDoodle className="bottom-[150px] right-[5%]" delay={2.0}>
+        <img src={sparklesA} alt="" className="w-16 h-auto" />
+      </FloatingDoodle>
+      
+      <FloatingDoodle className="top-[350px] right-[3%]" delay={0.6} parallax>
+        <img src={sparkleOutline} alt="" className="w-10 h-auto rotate-45" />
+      </FloatingDoodle>
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
