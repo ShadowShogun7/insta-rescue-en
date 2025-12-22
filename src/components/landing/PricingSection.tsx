@@ -213,12 +213,26 @@ const PurpleSpiralArrow = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// Wobbly marker underline for prices
+// Wobbly marker underline for prices - using exact provided path
 const WobblyUnderline = ({ className }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 200 20" fill="none">
+  <svg className={className} viewBox="0 0 180 30" fill="none">
     <path 
-      d="M10 15 Q30 8 50 12 Q70 16 90 10 Q110 4 130 12 Q150 18 170 10 Q190 5 195 12" 
+      d="M10 20 Q50 10 90 25 T170 15" 
       stroke="#9333EA" 
+      strokeWidth="3" 
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+// Doodle spiral for background texture - using exact provided path
+const DoodleSpiral = ({ className }: { className?: string }) => (
+  <svg width="100" height="100" viewBox="0 0 100 100" fill="none" className={className}>
+    <path 
+      d="M20 50 Q30 10 50 50 T80 50" 
+      stroke="black" 
       strokeWidth="3" 
       fill="none"
       strokeLinecap="round"
@@ -355,6 +369,19 @@ const PricingSection = () => {
       
       <FloatingDoodle className="bottom-40 left-[25%]" delay={2.5}>
         <FivePointStar size={35} />
+      </FloatingDoodle>
+      
+      {/* Doodle Spirals for background texture */}
+      <FloatingDoodle className="top-1/4 left-[40%]" delay={1.0} parallax>
+        <DoodleSpiral />
+      </FloatingDoodle>
+      
+      <FloatingDoodle className="bottom-1/4 right-[30%]" delay={1.7}>
+        <DoodleSpiral className="rotate-45" />
+      </FloatingDoodle>
+      
+      <FloatingDoodle className="top-2/3 left-[5%]" delay={2.2} parallax>
+        <DoodleSpiral className="-rotate-30" />
       </FloatingDoodle>
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
