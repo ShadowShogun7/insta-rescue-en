@@ -48,6 +48,8 @@ const HeroContent = () => {
         className="text-lg md:text-xl text-muted-foreground max-w-md"
       >
         找回被停用的IG賬號 – 完整戰略手冊
+        <br />
+        停用/被盜/被鎖-都適用
       </motion.p>
 
       {/* CTA Button + Trust Rating Badge Stack */}
