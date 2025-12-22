@@ -240,7 +240,7 @@ const PricingSection = () => {
         <img src={loopSwirl} alt="" className="w-20 h-auto" />
       </FloatingDoodle>
       
-      <FloatingDoodle className="bottom-[80px] left-[8%]" delay={1.8} parallax>
+      <FloatingDoodle className="bottom-[180px] left-[8%]" delay={1.8} parallax>
         <img src={ideaBulb} alt="" className="w-20 h-auto" />
       </FloatingDoodle>
       
