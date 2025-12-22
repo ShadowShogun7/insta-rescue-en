@@ -52,25 +52,27 @@ const HeroContent = () => {
         恢復您的社群影響力！
       </motion.p>
 
-      {/* CTA Button */}
+      {/* CTA Button + Trust Rating Badge Stack */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.6 }}
-        className="relative inline-block pt-4"
+        className="flex flex-col items-start gap-4 pt-4"
       >
-        <motion.button
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-          className="neo-button rounded-xl bg-primary text-primary-foreground px-8 py-4 text-lg font-bold"
-        >
-          立即免費諮詢 →
-        </motion.button>
-        <DoodleArrow />
-      </motion.div>
+        <div className="relative">
+          <motion.button
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="neo-button rounded-xl bg-primary text-primary-foreground px-8 py-4 text-lg font-bold"
+          >
+            立即免費諮詢 →
+          </motion.button>
+          <DoodleArrow />
+        </div>
 
-      {/* Trust Rating Badge */}
-      <TrustRatingBadge />
+        {/* Trust Rating Badge - Always below CTA */}
+        <TrustRatingBadge />
+      </motion.div>
 
       {/* Trust badges */}
       <motion.div
