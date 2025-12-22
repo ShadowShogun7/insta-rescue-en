@@ -293,7 +293,7 @@ const PricingSection = () => {
             <motion.img 
               src={pointingHandLeft} 
               alt="" 
-              className="absolute top-1/2 -translate-y-1/2 -left-28 w-28 h-auto z-20 pointer-events-none hidden lg:block"
+              className="absolute top-1/2 -translate-y-1/2 -left-28 w-28 h-auto z-20 pointer-events-none hidden lg:block mt-5"
               animate={{ x: [0, 8, 0], rotate: [-5, 5, -5] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
             />
