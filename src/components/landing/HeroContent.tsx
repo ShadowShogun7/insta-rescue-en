@@ -81,7 +81,7 @@ const HeroContent = () => {
         transition={{ duration: 0.5, delay: 0.8 }}
         className="flex flex-wrap gap-3 pt-4"
       >
-        <TrustBadge text="✓ 免費評估" />
+        <TrustBadge text="✓ 綠色通道" />
         <TrustBadge text="✓ 成功率80%以上" />
         <TrustBadge text="✓ 24小時回覆" />
       </motion.div>
