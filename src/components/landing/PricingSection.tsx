@@ -239,7 +239,6 @@ const PricingSection = () => {
               animate={{ y: [0, 6, 0], rotate: [0, 5, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             />
-            <TitleUnderline />
           </h2>
         </motion.div>
         
@@ -322,6 +321,14 @@ const PricingSection = () => {
                 </button>
               </div>
             </div>
+            {/* Scribble Underline below second card */}
+            <motion.img 
+              src={scribbleUnderline} 
+              alt="" 
+              className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-64 h-auto pointer-events-none"
+              animate={{ rotate: [-2, 2, -2] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            />
           </motion.div>
         </motion.div>
       </div>
