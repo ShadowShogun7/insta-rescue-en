@@ -256,7 +256,7 @@ const PricingSection = () => {
             <motion.img 
               src={peekingGuy} 
               alt="" 
-              className="absolute top-[36px] -left-32 w-32 h-auto z-0 pointer-events-none"
+              className="absolute top-[86px] -left-32 w-32 h-auto z-0 pointer-events-none"
               animate={{ y: [0, -8, 0], rotate: [-3, 3, -3] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             />
@@ -265,7 +265,7 @@ const PricingSection = () => {
             <motion.img 
               src={pointingHandLeft} 
               alt="" 
-              className="absolute top-1/3 -left-24 w-20 h-auto z-20 pointer-events-none hidden lg:block"
+              className="absolute top-1/2 -translate-y-1/2 -left-28 w-28 h-auto z-20 pointer-events-none hidden lg:block"
               animate={{ x: [0, 8, 0], rotate: [-5, 5, -5] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
             />
