@@ -2,7 +2,7 @@ import { Star } from "lucide-react";
 
 const MarqueeTrustBar = () => {
   const items = [
-    "🎉 成功解封 10,000+ 帳號",
+    "🎉 成功解封 2,000+ 帳號",
     "⭐ 客戶滿意度 98%",
     "🚀 24小時快速響應",
     "🔒 100% 安全保障",
