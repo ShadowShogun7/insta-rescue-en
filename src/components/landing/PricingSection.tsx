@@ -1,6 +1,12 @@
 import React from 'react';
 import { motion, Variants, useScroll, useTransform } from 'framer-motion';
 
+// PNG Doodle Assets
+import swirlArrow from "@/assets/doodles/swirl_arrow_down1.png";
+import scribbleUnderline from "@/assets/doodles/scribble_underline.png";
+import pointingHandLeft from "@/assets/doodles/pointing_hand_left.png";
+import peekingGuy from "@/assets/doodles/peeking_guy.png";
+
 // --- FLOATING DOODLE WRAPPER WITH CONTINUOUS ANIMATION ---
 const FloatingDoodle = ({ 
   children, 
@@ -117,22 +123,13 @@ const DoodleSpiral = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// Title underline squiggle
+// Title underline using PNG
 const TitleUnderline = () => (
-  <svg 
-    className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-48 h-4" 
-    viewBox="0 0 200 20" 
-    fill="none"
-  >
-    <path 
-      d="M5 10 Q 25 2, 50 10 T 100 10 T 150 10 T 195 10" 
-      stroke="black" 
-      strokeWidth="3" 
-      fill="none" 
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
+  <img 
+    src={scribbleUnderline} 
+    alt="" 
+    className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-56 h-auto"
+  />
 );
 
 
@@ -232,10 +229,18 @@ const PricingSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16 relative inline-block w-full"
         >
+          {/* Swirl Arrow pointing to title */}
+          <motion.img 
+            src={swirlArrow} 
+            alt="" 
+            className="absolute -top-8 -right-4 md:right-1/4 w-16 h-auto pointer-events-none"
+            animate={{ y: [0, 6, 0], rotate: [0, 5, 0] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+          />
+          
           <h2 className="text-5xl font-black inline-block relative z-10">
             方案詳情
             <TitleUnderline />
-            
           </h2>
         </motion.div>
         
@@ -248,7 +253,25 @@ const PricingSection = () => {
         >
           {/* --- PLAN 1 CARD: 實戰手冊 --- */}
           <motion.div variants={cardVariants} className="relative group z-10">
-            <div className="bg-white border-4 border-black rounded-3xl overflow-hidden shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
+            {/* Peeking Guy - behind card */}
+            <motion.img 
+              src={peekingGuy} 
+              alt="" 
+              className="absolute -top-16 -left-20 w-32 h-auto z-0 pointer-events-none"
+              animate={{ y: [0, -8, 0], rotate: [-3, 3, -3] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            />
+            
+            {/* Pointing Hand Left */}
+            <motion.img 
+              src={pointingHandLeft} 
+              alt="" 
+              className="absolute top-1/3 -left-24 w-20 h-auto z-20 pointer-events-none hidden lg:block"
+              animate={{ x: [0, 8, 0], rotate: [-5, 5, -5] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+            />
+            
+            <div className="bg-white border-4 border-black rounded-3xl overflow-hidden shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 relative z-10">
               <div className="bg-purple-600 py-6 text-center border-b-4 border-black">
                 <h3 className="text-3xl font-black text-white tracking-wider">實戰手冊</h3>
               </div>
