@@ -322,10 +322,11 @@ const PricingSection = () => {
               </div>
             </div>
             {/* Scribble Underline below second card */}
+            {/* Scribble Underline below second card */}
             <motion.img 
               src={scribbleUnderline} 
               alt="" 
-              className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-64 h-auto pointer-events-none"
+              className="absolute -bottom-[20px] left-0 w-64 h-auto pointer-events-none"
               animate={{ rotate: [-2, 2, -2] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             />
