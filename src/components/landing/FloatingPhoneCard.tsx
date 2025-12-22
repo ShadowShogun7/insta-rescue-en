@@ -31,26 +31,6 @@ const FloatingPhoneCard = () => {
           />
         </svg>
         
-        {/* Yellow counter-spinning arc */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <motion.svg
-            className="w-[500px] h-[500px] md:w-[700px] md:h-[700px] opacity-60"
-            viewBox="0 0 200 200"
-            animate={{ rotate: -360 }}
-            transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
-          >
-            <circle
-              cx="100"
-              cy="100"
-              r="60"
-              fill="none"
-              stroke="hsl(var(--neo-yellow))"
-              strokeWidth="2"
-              strokeDasharray="15 80"
-              strokeLinecap="round"
-            />
-          </motion.svg>
-        </div>
       </div>
 
       {/* Floating sparkles */}
