@@ -7,36 +7,26 @@ const FloatingPhoneCard = () => {
       {/* Spinning background circle */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0">
         <svg
-          className="w-[600px] h-[600px] md:w-[900px] md:h-[900px] slow-spin opacity-50"
+          className="w-[500px] h-[500px] md:w-[700px] md:h-[700px] slow-spin opacity-40"
           viewBox="0 0 200 200"
-          style={{ filter: 'drop-shadow(0 0 20px hsl(var(--accent) / 0.5))' }}
         >
           <circle
             cx="100"
             cy="100"
-            r="95"
+            r="90"
             fill="none"
             stroke="hsl(var(--accent))"
-            strokeWidth="1.5"
-            strokeDasharray="12 6"
+            strokeWidth="1"
+            strokeDasharray="10 5"
           />
           <circle
             cx="100"
             cy="100"
-            r="75"
+            r="70"
             fill="none"
             stroke="hsl(var(--secondary))"
-            strokeWidth="1.5"
-            strokeDasharray="6 12"
-          />
-          <circle
-            cx="100"
-            cy="100"
-            r="55"
-            fill="none"
-            stroke="hsl(var(--pink))"
             strokeWidth="1"
-            strokeDasharray="4 8"
+            strokeDasharray="5 10"
           />
         </svg>
       </div>
