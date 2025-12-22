@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Unlock, Sparkles } from "lucide-react";
+import { Unlock, Sparkles, Instagram } from "lucide-react";
 
 const FloatingPhoneCard = () => {
   return (
@@ -75,7 +75,7 @@ const FloatingPhoneCard = () => {
           {/* Card header */}
           <div className="flex items-center gap-3 mb-6">
             <div className="w-12 h-12 rounded-full bg-gradient-to-br from-pink to-accent flex items-center justify-center border-2 border-foreground">
-              <span className="text-xl">📱</span>
+              <Instagram size={24} className="text-white" />
             </div>
             <div>
               <p className="font-bold text-sm">Instagram</p>
