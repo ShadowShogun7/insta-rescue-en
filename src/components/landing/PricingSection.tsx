@@ -59,109 +59,6 @@ const DoodleInfoIcon = () => (
   </svg>
 );
 
-// Detailed character with glasses and phone
-const DoodleCharacterWithPhone = () => (
-  <motion.svg 
-    initial={{ x: -80, opacity: 0 }}
-    whileInView={{ x: 0, opacity: 1 }}
-    transition={{ delay: 0.5, duration: 0.8, type: "spring" }}
-    viewport={{ once: true }}
-    width="180" height="280" viewBox="0 0 180 280" fill="none" 
-    className="absolute -left-24 bottom-10 hidden lg:block z-20"
-  >
-    {/* Body */}
-    <ellipse cx="90" cy="220" rx="50" ry="55" fill="white" stroke="black" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-    
-    {/* Head */}
-    <circle cx="90" cy="100" r="55" fill="white" stroke="black" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-    
-    {/* Hair tuft */}
-    <path d="M70 50 Q 80 30, 90 45 Q 100 30, 110 50" stroke="black" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-    
-    {/* Glasses */}
-    <circle cx="70" cy="95" r="22" stroke="black" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-    <circle cx="110" cy="95" r="22" stroke="black" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-    <line x1="92" y1="95" x2="88" y2="95" stroke="black" strokeWidth="3" strokeLinecap="round"/>
-    <line x1="48" y1="90" x2="40" y2="85" stroke="black" strokeWidth="3" strokeLinecap="round"/>
-    <line x1="132" y1="90" x2="140" y2="85" stroke="black" strokeWidth="3" strokeLinecap="round"/>
-    
-    {/* Eyes behind glasses */}
-    <circle cx="70" cy="95" r="6" fill="black"/>
-    <circle cx="110" cy="95" r="6" fill="black"/>
-    <circle cx="72" cy="93" r="2" fill="white"/>
-    <circle cx="112" cy="93" r="2" fill="white"/>
-    
-    {/* Smile */}
-    <path d="M75 125 Q 90 140, 105 125" stroke="black" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-    
-    {/* Left arm holding phone */}
-    <path d="M45 200 Q 20 180, 25 140 Q 28 120, 45 115" stroke="black" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-    
-    {/* Phone in hand */}
-    <rect x="15" y="110" width="25" height="40" rx="4" fill="white" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-    <rect x="18" y="115" width="19" height="28" rx="2" fill="#E8E8E8" stroke="black" strokeWidth="1"/>
-    <circle cx="27.5" cy="147" r="2" stroke="black" strokeWidth="1" fill="none"/>
-    
-    {/* Right arm waving */}
-    <path d="M135 200 Q 155 185, 150 160" stroke="black" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-    
-    {/* Hand wave lines */}
-    <path d="M155 150 L165 145" stroke="black" strokeWidth="2" strokeLinecap="round"/>
-    <path d="M158 160 L170 158" stroke="black" strokeWidth="2" strokeLinecap="round"/>
-  </motion.svg>
-);
-
-// Left pointing hand 
-const DoodleHandLeft = () => (
-  <motion.svg
-    initial={{ x: -50, opacity: 0 }}
-    whileInView={{ x: 0, opacity: 1 }}
-    transition={{ delay: 0.8, duration: 0.6, type: "spring" }}
-    viewport={{ once: true }}
-    width="120" height="80" viewBox="0 0 120 80" fill="none" 
-    className="absolute -left-28 top-1/3 hidden lg:block z-20"
-  >
-    {/* Arm */}
-    <path d="M5 40 Q 30 35, 50 40" stroke="black" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-    {/* Hand */}
-    <ellipse cx="60" cy="40" rx="15" ry="12" fill="white" stroke="black" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-    {/* Pointing finger */}
-    <path d="M75 40 L 115 40" stroke="black" strokeWidth="4" strokeLinecap="round"/>
-    {/* Arrow tip */}
-    <path d="M105 32 L115 40 L105 48" stroke="black" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-  </motion.svg>
-);
-
-// Right pointing hand with decorative curves
-const DoodleHandRight = () => (
-  <motion.svg
-    initial={{ x: 50, opacity: 0 }}
-    whileInView={{ x: 0, opacity: 1 }}
-    transition={{ delay: 0.7, duration: 0.8, type: "spring" }}
-    viewport={{ once: true }}
-    width="140" height="120" viewBox="0 0 140 120" fill="none" 
-    className="absolute -right-20 top-1/2 -translate-y-1/2 hidden lg:block z-20"
-  >
-    {/* Decorative curve */}
-    <path d="M130 20 Q 140 60, 130 100" stroke="black" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-    
-    {/* Arm */}
-    <path d="M130 60 Q 100 55, 80 60" stroke="black" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-    
-    {/* Hand */}
-    <ellipse cx="65" cy="60" rx="18" ry="14" fill="white" stroke="black" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-    
-    {/* Pointing finger */}
-    <path d="M47 60 L 10 60" stroke="black" strokeWidth="4" strokeLinecap="round"/>
-    
-    {/* Arrow tip */}
-    <path d="M20 52 L10 60 L20 68" stroke="black" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-    
-    {/* Motion lines */}
-    <path d="M25 45 L35 48" stroke="black" strokeWidth="2" strokeLinecap="round"/>
-    <path d="M25 75 L35 72" stroke="black" strokeWidth="2" strokeLinecap="round"/>
-  </motion.svg>
-);
 
 // Accurate 5-point star
 const FivePointStar = ({ className, size = 60 }: { className?: string; size?: number }) => (
@@ -191,27 +88,6 @@ const YellowSparkle = ({ className, size = 40 }: { className?: string; size?: nu
   </svg>
 );
 
-// Purple spiral arrow
-const PurpleSpiralArrow = ({ className }: { className?: string }) => (
-  <svg width="100" height="100" viewBox="0 0 100 100" fill="none" className={className}>
-    <path 
-      d="M20 80 Q40 20 80 30" 
-      stroke="#9333EA" 
-      strokeWidth="4" 
-      fill="none"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path 
-      d="M70 15 L85 30 L70 45" 
-      stroke="#9333EA" 
-      strokeWidth="4" 
-      fill="none"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
 
 // Wobbly marker underline for prices - using exact provided path
 const WobblyUnderline = ({ className }: { className?: string }) => (
@@ -259,35 +135,6 @@ const TitleUnderline = () => (
   </svg>
 );
 
-// Curved arrow decoration near title - NOW PURPLE
-const CurvedArrow = () => (
-  <motion.svg 
-    initial={{ opacity: 0, scale: 0.8 }}
-    whileInView={{ opacity: 1, scale: 1 }}
-    transition={{ delay: 0.3, duration: 0.5 }}
-    viewport={{ once: true }}
-    className="absolute -top-8 -right-16 w-20 h-20 rotate-12" 
-    viewBox="0 0 80 80" 
-    fill="none"
-  >
-    <path 
-      d="M15 50 Q 20 20, 50 15 Q 65 12, 70 25" 
-      stroke="#9333EA" 
-      strokeWidth="3" 
-      fill="none" 
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path 
-      d="M62 18 L70 25 L63 32" 
-      stroke="#9333EA" 
-      strokeWidth="3" 
-      fill="none" 
-      strokeLinecap="round" 
-      strokeLinejoin="round"
-    />
-  </motion.svg>
-);
 
 // --- ANIMATION VARIANTS ---
 const cardVariants: Variants = {
@@ -343,9 +190,6 @@ const PricingSection = () => {
         <FivePointStar size={60} />
       </FloatingDoodle>
       
-      <FloatingDoodle className="top-40 right-[5%]" delay={1.2}>
-        <PurpleSpiralArrow />
-      </FloatingDoodle>
       
       <FloatingDoodle className="bottom-20 left-[15%]" delay={2}>
         <YellowSparkle size={45} />
@@ -363,9 +207,6 @@ const PricingSection = () => {
         <FivePointStar size={50} />
       </FloatingDoodle>
       
-      <FloatingDoodle className="top-1/2 right-[3%]" delay={1.8}>
-        <PurpleSpiralArrow className="rotate-45" />
-      </FloatingDoodle>
       
       <FloatingDoodle className="bottom-40 left-[25%]" delay={2.5}>
         <FivePointStar size={35} />
@@ -394,7 +235,7 @@ const PricingSection = () => {
           <h2 className="text-5xl font-black inline-block relative z-10">
             方案詳情
             <TitleUnderline />
-            <CurvedArrow />
+            
           </h2>
         </motion.div>
         
@@ -407,8 +248,6 @@ const PricingSection = () => {
         >
           {/* --- PLAN 1 CARD: 實戰手冊 --- */}
           <motion.div variants={cardVariants} className="relative group z-10">
-            <DoodleCharacterWithPhone />
-            <DoodleHandLeft />
             <div className="bg-white border-4 border-black rounded-3xl overflow-hidden shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
               <div className="bg-purple-600 py-6 text-center border-b-4 border-black">
                 <h3 className="text-3xl font-black text-white tracking-wider">實戰手冊</h3>
@@ -436,7 +275,6 @@ const PricingSection = () => {
 
           {/* --- PLAN 2 CARD: Meta特殊通道 --- */}
           <motion.div variants={cardVariants} className="relative group z-10">
-            <DoodleHandRight />
             <div className="bg-white border-4 border-black rounded-3xl overflow-hidden shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
               <div className="bg-purple-600 py-6 text-center border-b-4 border-black">
                 <h3 className="text-3xl font-black text-white tracking-wider">Meta特殊通道專案</h3>
