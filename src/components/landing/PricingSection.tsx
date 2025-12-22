@@ -257,7 +257,7 @@ const PricingSection = () => {
             <motion.img 
               src={peekingGuy} 
               alt="" 
-              className="absolute -top-[14px] -left-24 w-32 h-auto z-0 pointer-events-none"
+              className="absolute top-[36px] -left-32 w-32 h-auto z-0 pointer-events-none"
               animate={{ y: [0, -8, 0], rotate: [-3, 3, -3] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             />
