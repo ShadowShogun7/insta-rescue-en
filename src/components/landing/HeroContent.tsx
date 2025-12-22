@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import ScribbleUnderline from "./ScribbleUnderline";
 import DoodleArrow from "./DoodleArrow";
-
+import TrustRatingBadge from "./TrustRatingBadge";
 const HeroContent = () => {
   const headlineWords = ["Instagram", "帳號被封？"];
   
@@ -68,6 +68,9 @@ const HeroContent = () => {
         </motion.button>
         <DoodleArrow />
       </motion.div>
+
+      {/* Trust Rating Badge */}
+      <TrustRatingBadge />
 
       {/* Trust badges */}
       <motion.div
