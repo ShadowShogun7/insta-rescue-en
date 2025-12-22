@@ -7,7 +7,7 @@ import PainPointsSection from "./PainPointsSection";
 import HowItWorksSection from "./HowItWorksSection";
 import PricingSection from "./PricingSection";
 import FAQSection from "./FAQSection";
-
+import VideoTestimonialSection from "./VideoTestimonialSection";
 const IGHeroLanding = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -48,6 +48,9 @@ const IGHeroLanding = () => {
 
       {/* FAQ Section */}
       <FAQSection />
+
+      {/* Video Testimonial Section */}
+      <VideoTestimonialSection />
     </div>
   );
 };
