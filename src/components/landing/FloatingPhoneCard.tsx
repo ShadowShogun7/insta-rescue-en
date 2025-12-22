@@ -6,10 +6,22 @@ const FloatingPhoneCard = () => {
     <div className="relative overflow-visible">
       {/* Spinning background circle */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0">
+        {/* Pulsing glow effect */}
+        <motion.div 
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] md:w-[550px] md:h-[550px] rounded-full bg-gradient-radial from-pink/20 via-accent/10 to-transparent blur-2xl"
+          animate={{ 
+            scale: [1, 1.15, 1], 
+            opacity: [0.3, 0.5, 0.3] 
+          }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        />
+        
+        {/* Main spinning SVG with all elements */}
         <svg
           className="w-[500px] h-[500px] md:w-[700px] md:h-[700px] slow-spin opacity-40"
           viewBox="0 0 200 200"
         >
+          {/* Original circles */}
           <circle
             cx="100"
             cy="100"
@@ -28,7 +40,68 @@ const FloatingPhoneCard = () => {
             strokeWidth="1"
             strokeDasharray="5 10"
           />
+          
+          {/* Orbiting dots at cardinal positions */}
+          <circle cx="100" cy="5" r="3" fill="hsl(var(--neo-pink))" />
+          <circle cx="195" cy="100" r="2.5" fill="hsl(var(--neo-yellow))" />
+          <circle cx="100" cy="195" r="3" fill="hsl(var(--accent))" />
+          <circle cx="5" cy="100" r="2.5" fill="hsl(var(--neo-mint))" />
+          
+          {/* Additional smaller dots at diagonal positions */}
+          <circle cx="165" cy="35" r="2" fill="hsl(var(--neo-pink))" />
+          <circle cx="165" cy="165" r="2" fill="hsl(var(--neo-yellow))" />
+          <circle cx="35" cy="165" r="2" fill="hsl(var(--accent))" />
+          <circle cx="35" cy="35" r="2" fill="hsl(var(--neo-mint))" />
+          
+          {/* Cross/tick markers at 45-degree angles */}
+          <g transform="rotate(45 100 100)">
+            <line x1="100" y1="8" x2="100" y2="16" stroke="hsl(var(--foreground))" strokeWidth="2" />
+            <line x1="100" y1="184" x2="100" y2="192" stroke="hsl(var(--foreground))" strokeWidth="2" />
+            <line x1="8" y1="100" x2="16" y2="100" stroke="hsl(var(--foreground))" strokeWidth="2" />
+            <line x1="184" y1="100" x2="192" y2="100" stroke="hsl(var(--foreground))" strokeWidth="2" />
+          </g>
         </svg>
+        
+        {/* Animated arc segments - separate SVG for independent animation */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <motion.svg
+            className="w-[500px] h-[500px] md:w-[700px] md:h-[700px] opacity-60"
+            viewBox="0 0 200 200"
+            animate={{ rotate: 360 }}
+            transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+          >
+            <circle
+              cx="100"
+              cy="100"
+              r="80"
+              fill="none"
+              stroke="hsl(var(--neo-pink))"
+              strokeWidth="2"
+              strokeDasharray="20 100"
+              strokeLinecap="round"
+            />
+          </motion.svg>
+        </div>
+        
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <motion.svg
+            className="w-[500px] h-[500px] md:w-[700px] md:h-[700px] opacity-60"
+            viewBox="0 0 200 200"
+            animate={{ rotate: -360 }}
+            transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+          >
+            <circle
+              cx="100"
+              cy="100"
+              r="60"
+              fill="none"
+              stroke="hsl(var(--neo-yellow))"
+              strokeWidth="2"
+              strokeDasharray="15 80"
+              strokeLinecap="round"
+            />
+          </motion.svg>
+        </div>
       </div>
 
       {/* Floating sparkles */}
