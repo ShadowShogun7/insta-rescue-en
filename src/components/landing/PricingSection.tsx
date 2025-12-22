@@ -245,7 +245,7 @@ const PricingSection = () => {
       </FloatingDoodle>
       
       <FloatingDoodle className="bottom-[150px] right-[5%]" delay={2.0}>
-        <img src={sparklesA} alt="" className="w-16 h-auto" />
+        <img src={sparklesA} alt="" className="w-24 h-auto" />
       </FloatingDoodle>
       
       <FloatingDoodle className="top-[350px] right-[3%]" delay={0.6} parallax>
