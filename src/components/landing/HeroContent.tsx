@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import ScribbleUnderline from "./ScribbleUnderline";
 import DoodleArrow from "./DoodleArrow";
 import TrustRatingBadge from "./TrustRatingBadge";
@@ -65,7 +66,7 @@ const HeroContent = () => {
             whileTap={{ scale: 0.98 }}
             className="neo-button rounded-xl bg-primary text-primary-foreground px-8 py-4 text-lg font-bold"
           >
-            立即搶救賬號
+            立即搶救賬號 <ArrowRight className="inline-block ml-2" size={20} />
           </motion.button>
           <DoodleArrow />
         </div>
