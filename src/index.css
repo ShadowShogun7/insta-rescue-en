@@ -183,7 +183,7 @@
   /* Testimonial marquee - slower for reading */
   .animate-marquee-testimonials {
     display: flex;
-    animation: marquee 40s linear infinite;
+    animation: marquee 30s linear infinite;
   }
   
   .animate-marquee-testimonials:hover {
