@@ -64,7 +64,7 @@ const HowItWorksSection = () => {
     { 
       number: "02", 
       title: "9大隱藏管道", 
-      description: "我們分析被封原因，並透過內部渠道代您提交專業申訴。" 
+      description: "「8個申訴渠道」＋「9個特殊方法」+「申訴文案模版」" 
     },
     { 
       number: "03", 
