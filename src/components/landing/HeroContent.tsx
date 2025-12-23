@@ -83,7 +83,7 @@ const HeroContent = () => {
       >
         <TrustBadge text="✓ 綠色通道" />
         <TrustBadge text="✓ 成功率80%以上" />
-        <TrustBadge text="✓ 24小時回覆" />
+        <TrustBadge text="✓ 2000+成功案例" />
       </motion.div>
     </div>
   );
