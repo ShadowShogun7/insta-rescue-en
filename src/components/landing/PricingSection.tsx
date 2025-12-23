@@ -4,7 +4,7 @@ import { motion, Variants, useScroll, useTransform } from 'framer-motion';
 // PNG Doodle Assets
 import swirlArrow from "@/assets/doodles/swirl_arrow_down1.png";
 import scribbleUnderline from "@/assets/doodles/scribble_underline.png";
-import pointingHandLeft from "@/assets/doodles/pointing_hand_left.png";
+
 import peekingGuy from "@/assets/doodles/peeking_guy.png";
 import sparkleOutline from "@/assets/doodles/sparkle_outline.png";
 import loopSwirl from "@/assets/doodles/loop_swirl.png";
@@ -281,14 +281,6 @@ const PricingSection = () => {
           {/* --- PLAN 1 CARD: 實戰手冊 --- */}
           <motion.div variants={cardVariants} className="relative group z-10">
             
-            {/* Pointing Hand Left */}
-            <motion.img 
-              src={pointingHandLeft} 
-              alt="" 
-              className="absolute top-1/2 -translate-y-1/2 -left-28 w-28 h-auto z-20 pointer-events-none hidden lg:block mt-5"
-              animate={{ x: [0, 8, 0], rotate: [-5, 5, -5] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-            />
             
             <div className="bg-white border-4 border-black rounded-3xl overflow-hidden shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 relative z-10">
               <div className="bg-purple-600 py-6 text-center border-b-4 border-black">
