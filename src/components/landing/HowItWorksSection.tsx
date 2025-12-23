@@ -58,7 +58,7 @@ const HowItWorksSection = () => {
   const steps = [
     { 
       number: "01", 
-      title: "提交免費評估", 
+      title: "獨家*歐洲版申訴取道（成功率80%以上）", 
       description: "填寫簡單表單，告訴我們您的帳號狀況。無需提供密碼。" 
     },
     { 
