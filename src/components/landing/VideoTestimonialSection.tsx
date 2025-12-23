@@ -42,6 +42,7 @@ const VideoTestimonial = ({ videoUrl, name, delay }: VideoTestimonialProps) => {
             className="w-full h-full object-cover" 
             loop 
             playsInline
+            preload="metadata"
             onEnded={() => setIsPlaying(false)}
           />
           {/* Play/Pause Icon Overlay */}
