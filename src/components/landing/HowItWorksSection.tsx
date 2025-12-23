@@ -100,7 +100,7 @@ const HowItWorksSection = () => {
           transition={{ duration: 0.6 }}
         >
           <span className="inline-block bg-neo-yellow border-2 border-foreground rounded-full px-6 py-2 text-sm font-bold mb-4 neo-shadow">
-            流程簡單透明
+            把握黃金恢復期
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">
             救援三部曲
