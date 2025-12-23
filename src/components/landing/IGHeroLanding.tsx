@@ -18,14 +18,14 @@ const IGHeroLanding = () => {
 
       {/* Hero Section */}
       <main className="container mx-auto px-6 py-12 md:py-20">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-8 items-center">
           {/* Left Content */}
-          <div className="order-2 lg:order-1">
+          <div className="order-2 md:order-1">
             <HeroContent />
           </div>
 
           {/* Right - Floating Phone Card */}
-          <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
+          <div className="order-1 md:order-2 flex justify-center md:justify-end">
             <FloatingPhoneCard />
           </div>
         </div>
