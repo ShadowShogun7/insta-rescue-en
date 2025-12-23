@@ -19,7 +19,7 @@ const PainPointsSection = () => {
   ];
 
   const solutions = [
-    "✅ 獨家-歐洲版申訴取道",
+    "✅ Recovery專員全程1對1協助你",
     "✅ 2000+成功案例-撰寫最高成功率申訴信",
     "✅ 直達[IG官方中央支援團隊]",
     "🎉 成功率80%以上",
