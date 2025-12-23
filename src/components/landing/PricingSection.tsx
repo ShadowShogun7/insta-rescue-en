@@ -236,7 +236,7 @@ const PricingSection = () => {
         <img src={starOutline} alt="" className="w-14 h-auto" />
       </FloatingDoodle>
       
-      <FloatingDoodle className="top-[60px] left-[calc(45%-70px)]" delay={1.2}>
+      <FloatingDoodle className="top-[60px] left-[calc(45%-120px)]" delay={1.2}>
         <img src={loopSwirl} alt="" className="w-20 h-auto" />
       </FloatingDoodle>
       
