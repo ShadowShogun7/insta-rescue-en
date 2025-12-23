@@ -63,7 +63,7 @@ const HowItWorksSection = () => {
     },
     { 
       number: "02", 
-      title: "專家診斷與申訴", 
+      title: "9大隱藏管道", 
       description: "我們分析被封原因，並透過內部渠道代您提交專業申訴。" 
     },
     { 
