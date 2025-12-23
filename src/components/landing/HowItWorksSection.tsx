@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 interface StepCardProps {
   number: string;
@@ -151,7 +152,7 @@ const HowItWorksSection = () => {
             whileHover={{ scale: 1.05, rotate: -1 }}
             whileTap={{ scale: 0.95 }}
           >
-            立即搶救賬號
+            立即搶救賬號 <ArrowRight className="inline-block ml-2" size={20} />
           </motion.button>
         </motion.div>
       </div>
