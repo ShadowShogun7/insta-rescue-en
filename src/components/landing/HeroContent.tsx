@@ -64,9 +64,9 @@ const HeroContent = () => {
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="neo-button rounded-xl bg-primary text-primary-foreground px-8 py-4 text-lg font-bold"
+            className="neo-button rounded-xl bg-primary text-primary-foreground px-8 py-4 text-lg font-bold group"
           >
-            立即搶救賬號 <ArrowRight className="inline-block ml-2" size={20} />
+            立即搶救賬號 <ArrowRight className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1" size={20} />
           </motion.button>
           <DoodleArrow />
         </div>

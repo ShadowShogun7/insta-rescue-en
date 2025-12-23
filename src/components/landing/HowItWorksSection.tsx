@@ -148,11 +148,11 @@ const HowItWorksSection = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           <motion.button
-            className="neo-button bg-neo-yellow text-foreground font-bold text-lg px-10 py-4 rounded-full"
+            className="neo-button bg-neo-yellow text-foreground font-bold text-lg px-10 py-4 rounded-full group"
             whileHover={{ scale: 1.05, rotate: -1 }}
             whileTap={{ scale: 0.95 }}
           >
-            立即搶救賬號 <ArrowRight className="inline-block ml-2" size={20} />
+            立即搶救賬號 <ArrowRight className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1" size={20} />
           </motion.button>
         </motion.div>
       </div>
