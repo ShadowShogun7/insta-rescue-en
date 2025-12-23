@@ -151,7 +151,7 @@ const HowItWorksSection = () => {
             whileHover={{ scale: 1.05, rotate: -1 }}
             whileTap={{ scale: 0.95 }}
           >
-            馬上開始第一步 →
+            立即搶救賬號
           </motion.button>
         </motion.div>
       </div>
