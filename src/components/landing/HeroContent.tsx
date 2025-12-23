@@ -22,7 +22,7 @@ const HeroContent = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-4xl md:text-5xl lg:text-6xl font-black"
             >
-              Instagram
+              IG帳號被封
             </motion.span>
           </span>
         </motion.div>
