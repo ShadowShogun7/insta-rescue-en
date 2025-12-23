@@ -3,11 +3,12 @@ import { useState, useRef } from 'react';
 
 interface VideoTestimonialProps {
   videoUrl: string;
+  posterUrl: string;
   name: string;
   delay: number;
 }
 
-const VideoTestimonial = ({ videoUrl, name, delay }: VideoTestimonialProps) => {
+const VideoTestimonial = ({ videoUrl, posterUrl, name, delay }: VideoTestimonialProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -38,7 +39,8 @@ const VideoTestimonial = ({ videoUrl, name, delay }: VideoTestimonialProps) => {
           {/* Video */}
           <video 
             ref={videoRef}
-            src={videoUrl} 
+            src={videoUrl}
+            poster={posterUrl}
             className="w-full h-full object-cover" 
             loop 
             playsInline
@@ -70,12 +72,12 @@ const VideoTestimonial = ({ videoUrl, name, delay }: VideoTestimonialProps) => {
 
 const VideoTestimonialSection = () => {
   const testimonials = [
-    { name: "用戶成功回饋 A", url: "/videos/testimonial-1.mp4" },
-    { name: "用戶成功回饋 B", url: "/videos/testimonial-2.mp4" },
-    { name: "用戶成功回饋 C", url: "/videos/testimonial-3.mp4" },
-    { name: "用戶成功回饋 D", url: "/videos/testimonial-4.mp4" },
-    { name: "用戶成功回饋 E", url: "/videos/testimonial-5.mp4" },
-    { name: "用戶成功回饋 F", url: "/videos/testimonial-6.mp4" },
+    { name: "用戶成功回饋 A", url: "/videos/testimonial-1.mp4", poster: "/videos/testimonial-1-poster.webp" },
+    { name: "用戶成功回饋 B", url: "/videos/testimonial-2.mp4", poster: "/videos/testimonial-2-poster.webp" },
+    { name: "用戶成功回饋 C", url: "/videos/testimonial-3.mp4", poster: "/videos/testimonial-3-poster.webp" },
+    { name: "用戶成功回饋 D", url: "/videos/testimonial-4.mp4", poster: "/videos/testimonial-4-poster.webp" },
+    { name: "用戶成功回饋 E", url: "/videos/testimonial-5.mp4", poster: "/videos/testimonial-5-poster.webp" },
+    { name: "用戶成功回饋 F", url: "/videos/testimonial-6.mp4", poster: "/videos/testimonial-6-poster.webp" },
   ];
 
   return (
@@ -100,7 +102,7 @@ const VideoTestimonialSection = () => {
       {/* 3x2 Grid on desktop, Scrollable on mobile */}
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 relative z-10">
         {testimonials.map((t, i) => (
-          <VideoTestimonial key={i} name={t.name} videoUrl={t.url} delay={i * 0.1} />
+          <VideoTestimonial key={i} name={t.name} videoUrl={t.url} posterUrl={t.poster} delay={i * 0.1} />
         ))}
       </div>
       
