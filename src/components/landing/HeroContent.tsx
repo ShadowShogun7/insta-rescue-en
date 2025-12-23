@@ -34,7 +34,7 @@ const HeroContent = () => {
           className="relative inline-block"
         >
           <span className="text-4xl md:text-5xl lg:text-6xl font-black text-primary">
-            帳號被封？
+            求訴無門？
           </span>
           <ScribbleUnderline />
         </motion.div>
