@@ -65,7 +65,7 @@ const HeroContent = () => {
             whileTap={{ scale: 0.98 }}
             className="neo-button rounded-xl bg-primary text-primary-foreground px-8 py-4 text-lg font-bold"
           >
-            立即購買 →
+            立即搶救賬號
           </motion.button>
           <DoodleArrow />
         </div>
