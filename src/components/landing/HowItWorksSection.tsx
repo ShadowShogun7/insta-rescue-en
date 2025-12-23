@@ -68,7 +68,7 @@ const HowItWorksSection = () => {
     },
     { 
       number: "03", 
-      title: "成功找回帳號", 
+      title: "聯絡IG官方真人客服", 
       description: "等待官方審核通過。確認您能正常登入後，我們才收取費用。" 
     },
   ];
