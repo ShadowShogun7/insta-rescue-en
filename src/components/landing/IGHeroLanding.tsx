@@ -4,6 +4,7 @@ import FloatingPhoneCard from "./FloatingPhoneCard";
 import MarqueeTrustBar from "./MarqueeTrustBar";
 import SocialProofSection from "./SocialProofSection";
 import PainPointsSection from "./PainPointsSection";
+import StatsSection from "./StatsSection";
 import HowItWorksSection from "./HowItWorksSection";
 import PricingSection from "./PricingSection";
 import FAQSection from "./FAQSection";
@@ -41,6 +42,9 @@ const IGHeroLanding = () => {
 
       {/* Pain Points Section */}
       <PainPointsSection />
+
+      {/* Stats Section */}
+      <StatsSection />
 
       {/* How It Works Section */}
       <HowItWorksSection />
