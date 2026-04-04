@@ -3,8 +3,7 @@ import HeroContent from "./HeroContent";
 import FloatingPhoneCard from "./FloatingPhoneCard";
 import MarqueeTrustBar from "./MarqueeTrustBar";
 import SocialProofSection from "./SocialProofSection";
-import PainPointsSection from "./PainPointsSection";
-import StatsSection from "./StatsSection";
+import ProblemSection from "./ProblemSection";
 import HowItWorksSection from "./HowItWorksSection";
 import PricingSection from "./PricingSection";
 import FAQSection from "./FAQSection";
@@ -40,11 +39,8 @@ const IGHeroLanding = () => {
       {/* Social Proof Section */}
       <SocialProofSection />
 
-      {/* Pain Points Section */}
-      <PainPointsSection />
-
-      {/* Stats Section */}
-      <StatsSection />
+      {/* Problem Section */}
+      <ProblemSection />
 
       {/* How It Works Section */}
       <HowItWorksSection />
