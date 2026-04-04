@@ -72,12 +72,12 @@ const VideoTestimonial = ({ videoUrl, posterUrl, name, delay }: VideoTestimonial
 
 const VideoTestimonialSection = () => {
   const testimonials = [
-    { name: "用戶成功回饋 A", url: "/videos/testimonial-1.mp4", poster: "/videos/testimonial-1-poster.webp" },
-    { name: "用戶成功回饋 B", url: "/videos/testimonial-2.mp4", poster: "/videos/testimonial-2-poster.webp" },
-    { name: "用戶成功回饋 C", url: "/videos/testimonial-3.mp4", poster: "/videos/testimonial-3-poster.webp" },
-    { name: "用戶成功回饋 D", url: "/videos/testimonial-4.mp4", poster: "/videos/testimonial-4-poster.webp" },
-    { name: "用戶成功回饋 E", url: "/videos/testimonial-5.mp4", poster: "/videos/testimonial-5-poster.webp" },
-    { name: "用戶成功回饋 F", url: "/videos/testimonial-6.mp4", poster: "/videos/testimonial-6-poster.webp" },
+    { name: "Success Story A", url: "/videos/testimonial-1.mp4", poster: "/videos/testimonial-1-poster.webp" },
+    { name: "Success Story B", url: "/videos/testimonial-2.mp4", poster: "/videos/testimonial-2-poster.webp" },
+    { name: "Success Story C", url: "/videos/testimonial-3.mp4", poster: "/videos/testimonial-3-poster.webp" },
+    { name: "Success Story D", url: "/videos/testimonial-4.mp4", poster: "/videos/testimonial-4-poster.webp" },
+    { name: "Success Story E", url: "/videos/testimonial-5.mp4", poster: "/videos/testimonial-5-poster.webp" },
+    { name: "Success Story F", url: "/videos/testimonial-6.mp4", poster: "/videos/testimonial-6-poster.webp" },
   ];
 
   return (
@@ -85,7 +85,7 @@ const VideoTestimonialSection = () => {
       {/* Background Section Title */}
       <div className="max-w-7xl mx-auto px-6 mb-20 relative">
         <h2 className="text-4xl md:text-6xl font-black text-center text-foreground relative z-10">
-          聽聽他們怎麼說
+          Hear It From Our Customers
           <motion.svg 
             initial={{ pathLength: 0 }}
             whileInView={{ pathLength: 1 }}

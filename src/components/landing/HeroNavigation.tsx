@@ -19,7 +19,7 @@ const HeroNavigation = () => {
         >
           <span className="text-lg font-bold text-primary-foreground">IG</span>
         </motion.div>
-        <span className="text-xl font-bold">解封專家</span>
+        <span className="text-xl font-bold">IG Recovery</span>
       </div>
 
       {/* Menu Button */}

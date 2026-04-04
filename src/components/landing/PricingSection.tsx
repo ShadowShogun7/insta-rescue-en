@@ -152,27 +152,19 @@ const containerVariants: Variants = {
 // --- MAIN PRICING SECTION COMPONENT ---
 const PricingSection = () => {
   const plan1Features = [
-    "8個申訴渠道 - 使用方法詳解",
-    "9種特殊申訴法詳解",
-    "停用超過30天特殊申訴法",
-    "被鎖/無法登入破解方法",
-    "收不到驗證碼破解方法",
-    "被盜用的賬號找回方法",
-    "聯絡真人客服經理",
-    "向美國司法部申訴",
-    "美國商業改進局協助申訴",
-    "如何多渠道同步申訴"
+    "Priority Appeal Channels (80% Success Rate)",
+    "Hidden Channels & Escalation Routes",
+    "7 Advanced Strategies",
+    "Direct Access to Instagram Central Support Team",
+    "Dedicated support (24 hours reply)",
   ];
 
   const plan2Features = [
-    "此報價為USD(美金)",
-    "救回帳號成功率95%以上",
-    "30天內沒有成功全額退",
-    "USD$100手續費不能退",
-    "Meta經理直接內部優先渠道提交",
-    "可救facebook帳號",
-    "可救instagram帳號",
-    "適用於停用，被盜，被鎖"
+    "100% Guaranteed Recovery",
+    "You Do Nothing. We handle everything.",
+    "Works For Instagram and FB Account",
+    "Works For Disabled/Hacked/Locked",
+    "Full Refund if Account Not Recovered",
   ];
 
   return (
@@ -259,7 +251,7 @@ const PricingSection = () => {
           className="text-center mb-16 relative inline-block w-full"
         >
           <h2 className="text-5xl font-black inline-block relative z-10">
-            方案詳情
+            Choose Your Plan
             {/* Swirl Arrow - right of title */}
             <motion.img 
               src={swirlArrow} 
@@ -284,13 +276,13 @@ const PricingSection = () => {
             
             <div className="bg-white border-4 border-black rounded-3xl overflow-hidden shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 relative z-10">
               <div className="bg-purple-600 py-6 text-center border-b-4 border-black">
-                <h3 className="text-3xl font-black text-white tracking-wider">實戰手冊</h3>
+                <h3 className="text-3xl font-black text-white tracking-wider">The Ultimate IG Recovery Guide</h3>
               </div>
               <div className="p-10 text-center bg-neo-cream">
                 <div className="mb-8 relative inline-block">
-                  <h4 className="text-5xl md:text-6xl font-black mb-2 tracking-tight">NTD$1980</h4>
+                  <h4 className="text-5xl md:text-6xl font-black mb-2 tracking-tight">USD$59</h4>
                   <WobblyUnderline className="absolute -bottom-1 left-0 w-full h-4" />
-                  <p className="text-xl md:text-2xl font-bold text-muted-foreground mt-4">HKD$558</p>
+                  <p className="text-xl md:text-2xl font-bold text-muted-foreground mt-4">approx. EUR€50</p>
                 </div>
                 <ul className="text-left space-y-4 mb-10 inline-block">
                   {plan1Features.map((feature, index) => (
@@ -300,9 +292,10 @@ const PricingSection = () => {
                     </li>
                   ))}
                 </ul>
-                <button className="w-full bg-purple-600 text-white text-xl md:text-2xl font-black py-4 rounded-xl border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[6px] hover:translate-y-[6px] transition-all flex items-center justify-center">
-                  立即購買 <DoodleCartIcon />
-                </button>
+                <a href="https://shop.unbanhero.com/?add-to-cart=22" target="_blank" rel="noopener noreferrer" className="w-full bg-purple-600 text-white text-xl md:text-2xl font-black py-4 rounded-xl border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[6px] hover:translate-y-[6px] transition-all flex items-center justify-center block text-center">
+                  Buy Now <DoodleCartIcon />
+                </a>
+                <p className="text-xs text-muted-foreground mt-4 text-center">Please note that this is a digital guide, and all sales are final and non-refundable.</p>
               </div>
             </div>
           </motion.div>
@@ -311,27 +304,28 @@ const PricingSection = () => {
           <motion.div variants={cardVariants} className="relative group z-10">
             <div className="bg-white border-4 border-black rounded-3xl overflow-hidden shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
               <div className="bg-purple-600 py-6 text-center border-b-4 border-black">
-                <h3 className="text-3xl font-black text-white tracking-wider">Meta特殊通道專案</h3>
+                <h3 className="text-3xl font-black text-white tracking-wider">Meta Insider Recovery Service</h3>
               </div>
               <div className="p-10 text-center bg-neo-cream">
                 <div className="mb-8 relative inline-block">
-                  <h4 className="text-5xl md:text-6xl font-black mb-2 tracking-tight">USD$4000起</h4>
+                  <h4 className="text-5xl md:text-6xl font-black mb-2 tracking-tight">USD$4000</h4>
                   <WobblyUnderline className="absolute -bottom-1 left-0 w-full h-4" />
-                  <p className="text-xl md:text-2xl font-bold text-muted-foreground mt-4">手續費USD$100</p>
+                  <p className="text-xl md:text-2xl font-bold text-muted-foreground mt-4">approx. EUR€3400</p>
                 </div>
                 <ul className="text-left space-y-4 mb-10 inline-block">
                   {plan2Features.map((feature, index) => (
                     <li key={index} className="flex items-start text-base md:text-lg font-bold text-foreground">
                       <DoodleCheck />
-                      <span className={feature.includes("不退") || feature.includes("USD") ? "decoration-wavy underline decoration-purple-400" : ""}>
+                      <span>
                         {feature}
                       </span>
                     </li>
                   ))}
                 </ul>
-                <button className="w-full bg-neo-cream text-foreground text-xl md:text-2xl font-black py-4 rounded-full border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[6px] hover:translate-y-[6px] transition-all flex items-center justify-center hover:bg-neo-yellow">
-                  立即諮詢 <DoodleInfoIcon />
-                </button>
+                <a href="mailto:support@unbanhero.com" className="w-full bg-neo-cream text-foreground text-xl md:text-2xl font-black py-4 rounded-full border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[6px] hover:translate-y-[6px] transition-all flex items-center justify-center hover:bg-neo-yellow block text-center">
+                  Contact Support <DoodleInfoIcon />
+                </a>
+                <p className="text-xs text-muted-foreground mt-4 text-center">Contact customer support for quotation. Each case is different and the starting price is $4000</p>
               </div>
             </div>
             {/* Scribble Underline below second card */}

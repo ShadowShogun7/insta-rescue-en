@@ -26,10 +26,10 @@ const createFloatAnimation = (delay: number = 0): { y: number[]; rotate: number[
 });
 
 const stats = [
-  { value: "3天", label: "解除Shadowban", delay: 0 },
-  { value: "100%", label: "解除限流保證", delay: 0.1 },
-  { value: "3500+", label: "賬號已使用檢測", delay: 0.2 },
-  { value: "280%", label: "平均觸及提升效益", delay: 0.3 },
+  { value: "3 Days", label: "Remove Shadowban", delay: 0 },
+  { value: "100%", label: "Shadowban Removal Guaranteed", delay: 0.1 },
+  { value: "3500+", label: "Accounts Diagnosed", delay: 0.2 },
+  { value: "280%", label: "Average Reach Improvement", delay: 0.3 },
 ];
 
 // Hand-drawn SVG components for dashboard
@@ -117,8 +117,8 @@ const DoodleInstagramCard = () => (
 
 const DoodleChecklist = () => (
   <div className="space-y-1.5">
-    <p className="font-bold text-sm mb-2">建議行動</p>
-    {["增加互動頻率", "優化社交標籤", "分析帳號主體趨勢", "調整內容定位"].map((item, i) => (
+    <p className="font-bold text-sm mb-2">Recommendations</p>
+    {["Increase engagement frequency", "Optimize hashtag strategy", "Analyze account niche trends", "Adjust content positioning"].map((item, i) => (
       <div key={i} className="flex items-center gap-2 text-xs">
         <div className="w-4 h-4 rounded border-2 border-foreground bg-primary flex items-center justify-center">
           <span className="text-primary-foreground text-[10px]">✓</span>
@@ -145,17 +145,17 @@ const StatsSection = () => {
             {/* Badge */}
             <motion.div variants={fadeInUp}>
               <span className="inline-block px-4 py-2 bg-neo-lavender border-3 border-foreground rounded-full font-bold text-sm neo-shadow">
-                ✨ IG賬號優化專家
+                ✨ IG Account Optimization Experts
               </span>
             </motion.div>
 
             {/* Headlines */}
             <motion.div variants={fadeInUp} className="space-y-4">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-black leading-tight">
-                全方位修護IG賬號
+                Full-Service IG Account Recovery
               </h2>
               <p className="text-xl md:text-2xl text-primary font-bold">
-                解除限流/提高流量
+                Remove Shadowban / Boost Reach
               </p>
             </motion.div>
 
@@ -191,7 +191,7 @@ const StatsSection = () => {
                 whileTap={{ scale: 0.98 }}
                 className="neo-button flex items-center gap-2 text-lg"
               >
-                立即檢測你的賬號
+                Diagnose Your Account Now
                 <motion.span
                   animate={{ x: [0, 5, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
@@ -216,7 +216,7 @@ const StatsSection = () => {
                 animate={createFloatAnimation(0)}
                 className="bg-background border-3 border-foreground rounded-2xl p-3 neo-shadow"
               >
-                <p className="text-xs font-bold mb-1">最新分析</p>
+                <p className="text-xs font-bold mb-1">Latest Analysis</p>
                 <p className="text-[10px] text-muted-foreground">📅 12 July 2023</p>
               </motion.div>
 
@@ -224,8 +224,8 @@ const StatsSection = () => {
                 animate={createFloatAnimation(0.5)}
                 className="bg-neo-lavender/50 border-3 border-foreground rounded-2xl p-3 neo-shadow"
               >
-                <p className="text-xs font-bold mb-1">粉絲帳號真實性</p>
-                <p className="text-[10px] text-muted-foreground">可疑粉絲比例偏高</p>
+                <p className="text-xs font-bold mb-1">Follower Authenticity</p>
+                <p className="text-[10px] text-muted-foreground">Suspicious follower ratio detected</p>
               </motion.div>
 
               <motion.div
@@ -240,7 +240,7 @@ const StatsSection = () => {
                 animate={createFloatAnimation(0.3)}
                 className="bg-background border-3 border-foreground rounded-2xl p-3 neo-shadow"
               >
-                <p className="text-xs font-bold mb-2">內容表現</p>
+                <p className="text-xs font-bold mb-2">Content Performance</p>
                 <div className="h-16">
                   <DoodlePieChart />
                 </div>
@@ -250,7 +250,7 @@ const StatsSection = () => {
                 animate={createFloatAnimation(0.7)}
                 className="col-span-1 bg-neo-yellow/30 border-3 border-foreground rounded-2xl p-3 neo-shadow"
               >
-                <p className="text-xs font-bold mb-2">粉絲增長動跡</p>
+                <p className="text-xs font-bold mb-2">Follower Growth</p>
                 <div className="h-12">
                   <DoodleLineGraph />
                 </div>
@@ -282,7 +282,7 @@ const StatsSection = () => {
                 animate={createFloatAnimation(1.4)}
                 className="bg-neo-lavender/30 border-3 border-foreground rounded-2xl p-3 neo-shadow"
               >
-                <p className="text-xs font-bold mb-2">受眾分析</p>
+                <p className="text-xs font-bold mb-2">Audience Analysis</p>
                 <div className="h-12">
                   <DoodleBarChart />
                 </div>

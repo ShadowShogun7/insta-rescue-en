@@ -6,57 +6,37 @@ import starOutline from '@/assets/doodles/star_outline.png';
 // --- FAQ Data ---
 const faqData = [
   {
-    question: "收到IG通知已最終決定\"永久停用\"，還有救嗎？",
-    answer: "很多人在IG被停用後直接在手機上點擊申訴，然後經過24小時就收到這個通知：\"我們已停用你的賬號。沒有人可以看到或找到你的賬號，你也無法使用賬號，你的所有資訊都將永久刪除。你無法對此處置要求再次審查。\"。很多人都誤以為無法翻案，而放棄救援。\n\n實際上這是被停用的標準流程，這僅代表IG的手機app標準申訴渠道無法再次使用。我們已經協助超過2,000位收到同樣通知的用戶復原帳號。\n關鍵在於「渠道」與「申訴方法」：\n1️⃣ 不同渠道的審核團隊標準不一樣；\n2️⃣ 申訴內容需要符合審核員SOP查看的要件。\n這些技巧我們已整理在手冊裡：「8個申訴渠道」＋「9個特殊方法」+「申訴文案模版」\n使用我們的方法後通常3天時間收到IG的回復，高達80%成功機率。"
+    question: "How does Instagram decide to disable or restore accounts?",
+    answer: "Instagram is managed by a set of algorithms (automated computer systems), and in most cases there is no human intervention. Whether an account gets disabled—or restored after being disabled—is determined by these algorithms. Algorithms have a certain error rate, so many accounts get disabled \"for no reason.\"\n\nMost appeal forms submitted by users are also evaluated by these algorithms. Only a small portion receives human review.\n\nThis guide is designed to help you successfully submit appeals through effective channels, increasing the chances of getting a human review (human review is the only way to overturn an incorrect automated decision) and ultimately recovering your account."
   },
   {
-    question: "申訴後多久能找回？",
-    answer: "這個要看個案，每個人違規嚴重程度不同，然後也要看IG那邊同一時期有多少案件要處理，我們最快也有1天就成功取回的。"
+    question: "Is there more than one way to appeal?",
+    answer: "Most users think there's only one appeal channel — they open the mobile app, submit an appeal, and then feel stuck. In reality, there are several effective appeal channels and more than one method.\n\nThis guide covers all channels and step-by-step instructions for each (8 appeal channels + 9 special methods in one package). You just follow along. Each channel has different reviewers and review mechanisms — if any one of them approves your case, you get your account back.\n\nUsing multiple channels simultaneously greatly increases your chances of success!"
   },
   {
-    question: "我需要自己操作嗎？會不會很難？能不能代操？",
-    answer: "你按照手冊說明操作就可以，非常簡單。IG會偵測很多數據，所以你必須自己操作才不會節外生枝。\n\n如果操作遇到問題，我們的專員會提供協助。"
+    question: "Is recovery guaranteed?",
+    answer: "No channel can guarantee 100% recovery. Some severe violations cannot be reversed. What we can do is dramatically increase your chances of success.\n\nAs long as you haven't committed serious violations, following our guide gives you a very high chance of success — we have people recovering accounts every day.\n\nOur Meta Insider Recovery Service comes with a full refund guarantee if your account is not recovered within 30 days."
   },
   {
-    question: "被停用後多久申訴有用?",
-    answer: "IG已經完成重大更新，如果賬號被停用超過30天而沒有申訴的，就會直接被刪除。所以，被停用後必須立即申訴。只有成功提交申訴，才有可能找回。越早申訴，越容易找回。\n\n另外，還有的用戶已經申訴，但是收到IG的通知：\"我們已審查過停用你賬號的決議並決定此為最終結果，或是你的賬號已停用超過30天，所以此決議無法要求審查\"。我們的手冊也會提供特殊申訴方法，讓遇到這個問題的用戶仍然可以要求IG審核。\n\n越早提升申訴，成功找回的機率越高！。"
+    question: "How does Meta Insider Recovery Service work?",
+    answer: "The Meta Insider Recovery Service is our premium service where our specialist team handles everything for you. We submit your case directly through Meta's internal priority channels.\n\nStarting price is USD$4,000. Full refund if account not recovered within 30 days (USD$100 handling fee is non-refundable).\n\nContact our support team for a quotation — each case is different."
   },
   {
-    question: "救援成功的機率有多高？",
-    answer: "我們的「Meta特殊通道專案」擁有高達 95% 以上的救回帳號成功率。我們的專業團隊會為您提供最高效的解決方案。"
+    question: "How long does the recovery take?",
+    answer: "This depends on the individual case. The severity of the violation and Instagram's current case volume both play a role. Our fastest cases have been resolved in as little as 1 day.\n\nIn most cases, following our guide you can expect a response from Instagram within 3 days, with an 80% success rate."
   },
   {
-    question: "IG平台是如何決定停用及恢復賬號的？",
-    answer: "Instagram平台是由一組演算法(電腦運算系統)所管理，大多數情況下並沒有人工干預。因此賬號被停用與否、停用後被恢復與否，也都由這組演算法所決定。演算法有一定的誤判比例，因此很多賬號\"無故\"被停用。用戶所提交的申訴表大部分也由這組演算法判定是否恢復賬號，只有一小部分會經由人工介入審核。\n\n這本手冊的目的就是教你如何成功的通過有效渠道提交申訴，爭取人工審核的機率（被誤判才有可能被平反），增加賬號被恢復的機率。我們提供的渠道/方法可以讓你的案件直接被IG官方中央支援團隊受理，並且在3天內就會通知你。你的案件會得到充分的重視，最大幅度提升你找回的機率。"
+    question: "I have already appealed myself and got nowhere. Could this still work for me?",
+    answer: "Yes. If you haven't clearly violated Instagram's Terms of Service, submitting appeals through the special channels provided in this guide still gives you a real chance of recovery.\n\nIf you've already exhausted the standard appeal flow without any response, you must quickly pursue other channels to maximize your chances. Every day you wait is a lost opportunity — account recovery is time-sensitive."
   },
   {
-    question: "申訴的渠道只有一個嗎?",
-    answer: "大多數用戶都以為申訴的渠道只有一個，賬號被停用後打開手機APP，直接進行申訴，然後就束手無策了。其實，申訴的有效渠道有好幾個，方法也不只一種。這本手冊詳細說明所有的渠道及每個渠道的申訴步驟（8大申訴渠道+9種特殊申訴方法 一次打包），你只要跟著做就好。手冊裡面會詳細說明每個渠道如何使用，提交的頻率，收到回覆如何處理（申訴文案模版）等詳情。\n\n每一個渠道都有不同的審核人員及審核機制，只要其中有的讓你通過你就可以成功取回！所以，使用手冊多渠道申訴可以大大的增加你成功的機會！"
+    question: "I received a final decision notification saying my account is permanently disabled. Is there still hope?",
+    answer: "Many users receive this notification after appealing through the mobile app: \"We have disabled your account. No one can see or find your account, and you won't be able to use it. All your information will be permanently deleted. You cannot request a review of this decision.\"\n\nMost people assume this is truly the end and give up. In reality, this is the standard process for disabled accounts — it only means the standard mobile app appeal channel is no longer available.\n\nWe've helped over 2,000 users who received this same notification recover their accounts. The key is using the right channels and appeal methods — exactly what this guide provides."
   },
   {
-    question: "自己提交過申訴但還沒有找回，有救嗎？",
-    answer: "如果你沒有明確違反Instagram的使用條款，那麼通過這本手冊所提供的特殊渠道提交申訴，就有機會找回。\n\n如果你已經走完標準申訴流程但仍然沒有收到任何回覆，你就必須盡快通過其他的渠道進行申訴，這樣才能大幅提升你找回賬號的機率。找回賬號是分秒必爭的，你多等待一天就是多浪費一點機會。"
-  },
-  {
-    question: "可以保證100%找回嗎？",
-    answer: "沒有任何一個渠道可以100%保證找回。有些嚴重犯規是不可能可以救回的。我們能做的是大大的增加你成功的機率，只要你不是嚴重犯規，跟著我們手冊申訴成功的機率很大，我們每天都有人成功取回。"
-  },
-  {
-    question: "如果沒有找回，可以退款嗎？",
-    answer: "這是一本電子手冊，一旦售出系統會自動將手冊發到你的email，你可以立即下載使用。所以，手冊一旦售出，就無法退款。"
-  },
-  {
-    question: "我的申訴一直顯示「正在審查」，也無法重新提交，有救嗎？",
-    answer: "卡在審核畫面： 如果你的IG顯示「正在審查」畫面超過24小時，那就代表已經宕機，會一直卡在這個畫面。所以你必須立即從其他渠道提交申訴。IG被停用一定要越早申訴，找回的機率越高，如果超過30天有可能被永久停用。"
-  },
-  {
-    question: "因為版權問題被停用，可以找回嗎？",
-    answer: "手冊裡面有針對版權問題被停用的申訴方法，會詳細說明應該如何處理，申訴內容如何撰寫，如何準備對你有利的證據。"
-  },
-  {
-    question: "我的IG是廣告功能被禁用，這樣可以解決嗎？",
-    answer: "我們有針對IG廣告被禁止刊登/禁止加強推廣貼文的攻略，與賬號被停用不同哦。請點擊這個鏈接，訪問「解鎖IG廣告-完整攻略」頁面。"
-  },
+    question: "My appeal has been showing 'In Review' for a long time. Is there still hope?",
+    answer: "If your Instagram app shows 'In Review' for more than 24 hours, it likely means the system is stuck and will remain in that state indefinitely. You must immediately submit appeals through other channels.\n\nRemember: the sooner you appeal after being disabled, the higher your chances of recovery. Accounts disabled for more than 30 days without any appeal may be permanently deleted."
+  }
 ];
 
 // --- Hand-Drawn Arrow Icon ---
@@ -184,7 +164,7 @@ const FAQSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-black text-foreground inline-block relative">
-            常見問題
+            FAQ
             {/* Hand-drawn squiggly underline */}
             <svg className="absolute -bottom-4 left-0 w-full h-6 text-primary" viewBox="0 0 200 20" fill="none" preserveAspectRatio="none">
               <path d="M0,10 Q50,0 100,10 T200,10" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />

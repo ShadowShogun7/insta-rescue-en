@@ -28,7 +28,7 @@ const HeroContent = () => {
             duration: 0.5,
             delay: 0.1
           }} className="text-4xl md:text-5xl lg:text-6xl font-black">
-              IG帳號被封
+              Recover Disabled
             </motion.span>
           </span>
         </motion.div>
@@ -44,7 +44,7 @@ const HeroContent = () => {
         delay: 0.2
       }} className="relative inline-block">
           <span className="text-4xl md:text-5xl lg:text-6xl font-black text-primary">
-            求訴無門？
+            Instagram Account
           </span>
           <ScribbleUnderline />
         </motion.div>
@@ -68,7 +68,7 @@ const HeroContent = () => {
         }} whileTap={{
           scale: 0.98
         }} className="neo-button rounded-xl bg-primary text-primary-foreground px-8 py-4 text-lg font-bold group">
-            立即搶救賬號 <ArrowRight className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1" size={20} />
+            Recover My Account Now <ArrowRight className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1" size={20} />
           </motion.button>
           <DoodleArrow />
         </div>
@@ -86,9 +86,9 @@ const HeroContent = () => {
       duration: 0.5,
       delay: 0.8
     }} className="flex flex-wrap gap-3 pt-4">
-        <TrustBadge text="✓ 綠色通道" />
-        <TrustBadge text="✓ 成功率80%以上" />
-        <TrustBadge text="✓ 2000+成功案例" />
+        <TrustBadge text="✓ Hidden Channel" />
+        <TrustBadge text="✓ 80% Success Rate" />
+        <TrustBadge text="✓ 2000+ Successful Cases" />
       </motion.div>
     </div>;
 };

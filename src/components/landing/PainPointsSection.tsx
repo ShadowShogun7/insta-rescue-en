@@ -110,19 +110,19 @@ const DoodleNoSign = () => (
 const painPoints = [
   {
     icon: <DoodleSadFace />,
-    title: "帳號信用評級過低"
+    title: "Low Account Credit Score"
   },
   {
     icon: <DoodleGhost />,
-    title: "劣質粉絲比例過高"
+    title: "High Ghost Follower Ratio"
   },
   {
     icon: <DoodleBrokenHeart />,
-    title: "互動率過低 / 可疑讚數比例過高"
+    title: "Low Engagement Rate / Suspicious Likes"
   },
   {
     icon: <DoodleNoSign />,
-    title: "內容策略錯誤被演算法誤判"
+    title: "Content Strategy Triggering Algorithm Flags"
   }
 ];
 
@@ -143,22 +143,22 @@ const PainPointsSection = () => {
               variants={fadeInUp}
               className="inline-block text-primary font-bold text-sm tracking-wide border-2 border-foreground bg-neo-lavender/30 px-3 py-1 rounded-full neo-shadow-sm"
             >
-              重獲IG演算法青睞
+              Get Back Algorithm Favor
             </motion.span>
             
             <motion.h2 
               variants={fadeInUp}
               className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-tight"
             >
-              你的帳號在IG演算法的眼裡值幾分？
+              How does your account score in Instagram's algorithm?
             </motion.h2>
             
             <motion.div variants={fadeInUp} className="space-y-4 text-muted-foreground leading-relaxed text-lg">
               <p>
-                你非常努力經營帳號創作好的內容，但為什麼流量越來越低？觸及不到非粉絲？賬號成長緩慢？甚至有時連自己的粉絲都看不到你貼文更新...是不是被限流？被Shadowban？
+                You work hard creating great content, but why is your reach getting lower? Can't reach non-followers? Slow account growth? Sometimes even your own followers don't see your posts... Is it shadowban? Algorithm suppression?
               </p>
               <p>
-                擁有符合演算法期待值的數據，賬號才能健康成長。IG演算法為每個賬號都設有信用評級，評級高就能得到更多流量，評級低就會被降低流量（嚴重甚至被完全封鎖流量）。而影響評級的因素非常多。此方案將全方位透析你的IG賬號，避免誤踩演算法紅線，精準鎖定問題點，助你輕鬆對症下藥，從IG演算法的角度切入整頓賬號，提升流量。
+                Your account needs to meet the algorithm's expectations to grow healthily. Instagram's algorithm assigns a credit score to every account — higher scores get more reach, lower scores get suppressed (severe cases get completely blocked). This service gives your IG account a full diagnostic to pinpoint problems and fix them from the algorithm's perspective.
               </p>
             </motion.div>
             
@@ -168,7 +168,7 @@ const PainPointsSection = () => {
                 whileTap={{ scale: 0.98 }}
                 className="neo-button rounded-xl bg-primary text-primary-foreground px-8 py-4 text-lg font-bold group"
               >
-                立即啟動 
+                Start Diagnostic Now
                 <ArrowRight className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1" size={20} />
               </motion.button>
             </motion.div>
@@ -186,7 +186,7 @@ const PainPointsSection = () => {
               variants={fadeInUp}
               className="text-xl md:text-2xl font-black text-foreground text-center"
             >
-              造成限流的主要原因
+              Main Causes of Shadowban
             </motion.h3>
             
             <div className="grid grid-cols-2 gap-4">

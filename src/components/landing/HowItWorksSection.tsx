@@ -57,20 +57,20 @@ const HowItWorksSection = () => {
   const pathLength = useTransform(scrollYProgress, [0, 0.9], [0, 1]);
 
   const steps = [
-    { 
-      number: "01", 
-      title: "獨家-歐洲版申訴取道（成功率80%以上）", 
-      description: "填寫簡單表單，告訴我們您的帳號狀況。無需提供密碼。" 
+    {
+      number: "01",
+      title: "Priority Appeal Channels (80% success rate)",
+      description: "Works for all major Instagram account loss scenarios including disabled / suspended / permanently banned accounts."
     },
-    { 
-      number: "02", 
-      title: "9大隱藏管道", 
-      description: "「8個申訴渠道」＋「9個特殊方法」+「申訴文案模版」" 
+    {
+      number: "02",
+      title: "Hidden Channels & Escalation Routes",
+      description: "9 extra routes + advanced tactics + proven appeal scripts."
     },
-    { 
-      number: "03", 
-      title: "聯絡IG官方真人客服", 
-      description: "等待官方審核通過。確認您能正常登入後，我們才收取費用。" 
+    {
+      number: "03",
+      title: "Direct Access to Central Support Team",
+      description: "Get real specialists to diagnose your case and guide the next best step — reply within 24 hours, no guessing."
     },
   ];
 
@@ -101,10 +101,10 @@ const HowItWorksSection = () => {
           transition={{ duration: 0.6 }}
         >
           <span className="inline-block bg-neo-yellow border-2 border-foreground rounded-full px-6 py-2 text-sm font-bold mb-4 neo-shadow">
-            把握黃金恢復期
+            Act Within The Golden Recovery Window
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-            救援三部曲
+            The Recovery Trilogy
           </h2>
         </motion.div>
 
@@ -152,7 +152,7 @@ const HowItWorksSection = () => {
             whileHover={{ scale: 1.05, rotate: -1 }}
             whileTap={{ scale: 0.95 }}
           >
-            立即搶救賬號 <ArrowRight className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1" size={20} />
+            Recover My Account Now <ArrowRight className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1" size={20} />
           </motion.button>
         </motion.div>
       </div>

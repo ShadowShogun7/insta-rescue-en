@@ -46,7 +46,7 @@ const TrustRatingBadge = () => {
       <div className="flex items-center gap-2 border-l-2 border-foreground pl-3">
         <span className="font-black text-lg tracking-tight">4.9/5</span>
         <span className="font-bold text-muted-foreground text-sm whitespace-nowrap">
-          (1,265+ 個好評)
+          (1,265+ Reviews)
         </span>
         
         {/* Small "Magic Sparkle" Doodle */}

@@ -27,10 +27,10 @@ const TestimonialCard = ({ name, handle, text }: TestimonialCardProps) => (
 
 const SocialProofSection = () => {
   const testimonials = [
-    { name: "Alex C.", handle: "@alex_creates", text: "以為我的商務帳號沒救了，他們在24小時內就幫我拿回來！太神奇了。" },
-    { name: "Sarah L.", handle: "@sarahstyle", text: "不用給密碼真的讓我放心很多。專業又快速的服務。" },
-    { name: "Mark T.", handle: "@markymark", text: "完全是救援專家。不成功不收費的承諾是真的。" },
-    { name: "Jenny W.", handle: "@jenny_foodie", text: "我的十萬粉絲帳號終於回來了，感謝 IG-HERO 團隊！" },
+    { name: "Mia C.", handle: "E-commerce Seller", text: "Got my disabled IG back in 48 hours. Super clear steps, and support actually replies fast." },
+    { name: "Jason L.", handle: "Content Creator", text: "They tell you exactly what to submit and how to word it. No guessing. It genuinely works." },
+    { name: "Emily Z.", handle: "Brand Marketer", text: "My appeal was stuck forever. Followed their process and finally got a response — quick." },
+    { name: "Mia C.", handle: "E-commerce Seller", text: "Got my disabled IG back in 48 hours. Super clear steps, and support actually replies fast." },
   ];
 
   return (
@@ -52,7 +52,7 @@ const SocialProofSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          他們都成功找回了帳號
+          What Our Clients Say
           {/* Hand-drawn underline */}
           <svg
             className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-72 h-4"
