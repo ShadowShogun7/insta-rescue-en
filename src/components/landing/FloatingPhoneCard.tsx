@@ -79,14 +79,14 @@ const FloatingPhoneCard = () => {
             </div>
             <div>
               <p className="font-bold text-sm">Instagram</p>
-              <p className="text-xs text-muted-foreground">帳號解封中...</p>
+              <p className="text-xs text-muted-foreground">Appeal in progress...</p>
             </div>
           </div>
 
           {/* Progress section */}
           <div className="space-y-4">
             <div className="flex items-center justify-between">
-              <span className="text-sm font-medium">解封進度</span>
+              <span className="text-sm font-medium">Recovery Progress</span>
               <span className="text-sm font-bold text-accent">75%</span>
             </div>
             
@@ -112,10 +112,10 @@ const FloatingPhoneCard = () => {
 
             {/* Status items */}
             <div className="space-y-2 pt-2">
-              <StatusItem text="身份驗證" completed />
-              <StatusItem text="申訴提交" completed />
-              <StatusItem text="審核處理" inProgress />
-              <StatusItem text="帳號恢復" />
+              <StatusItem text="Identity Verified" completed />
+              <StatusItem text="Appeal Submitted" completed />
+              <StatusItem text="Under Review" inProgress />
+              <StatusItem text="Account Restored" />
             </div>
           </div>
 
