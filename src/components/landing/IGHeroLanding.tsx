@@ -48,11 +48,11 @@ const IGHeroLanding = () => {
       {/* Pricing Section */}
       <PricingSection />
 
-      {/* FAQ Section */}
-      <FAQSection />
-
       {/* Video Testimonial Section */}
       <VideoTestimonialSection />
+
+      {/* FAQ Section */}
+      <FAQSection />
 
       {/* Live Chat Widget */}
       <ChatWidget />
