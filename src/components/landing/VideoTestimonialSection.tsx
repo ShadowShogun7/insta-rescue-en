@@ -72,12 +72,36 @@ const VideoTestimonial = ({ videoUrl, posterUrl, name, delay }: VideoTestimonial
 
 const VideoTestimonialSection = () => {
   const testimonials = [
-    { name: "Success Story A", url: "/videos/testimonial-1.mp4", poster: "/videos/testimonial-1-poster.webp" },
-    { name: "Success Story B", url: "/videos/testimonial-2.mp4", poster: "/videos/testimonial-2-poster.webp" },
-    { name: "Success Story C", url: "/videos/testimonial-3.mp4", poster: "/videos/testimonial-3-poster.webp" },
-    { name: "Success Story D", url: "/videos/testimonial-4.mp4", poster: "/videos/testimonial-4-poster.webp" },
-    { name: "Success Story E", url: "/videos/testimonial-5.mp4", poster: "/videos/testimonial-5-poster.webp" },
-    { name: "Success Story F", url: "/videos/testimonial-6.mp4", poster: "/videos/testimonial-6-poster.webp" },
+    {
+      name: "2FA Issue Resolved",
+      url: "https://www.ig-hero.com/wp-content/uploads/2026/04/customer-testimnonial-3-2fa-issue-resolved-1.mp4",
+      poster: ""
+    },
+    {
+      name: "Permanently Disabled and Recovered",
+      url: "https://www.ig-hero.com/wp-content/uploads/2026/04/customer-testimonial-1-ig-account-permanently-disabled-and-recovered-1.mp4",
+      poster: ""
+    },
+    {
+      name: "Locked Out Code Fixed",
+      url: "https://www.ig-hero.com/wp-content/uploads/2026/04/customer-testimonial-2-lockedout-code-does-not-work-resolved-1.mp4",
+      poster: ""
+    },
+    {
+      name: "Hacked Account Recovered",
+      url: "https://www.ig-hero.com/wp-content/uploads/2026/04/customer-testimonial-4-ig-hacked-email-changed-recoverd-1.mp4",
+      poster: ""
+    },
+    {
+      name: "IG + FB Ban Recovered",
+      url: "https://www.ig-hero.com/wp-content/uploads/2026/04/customer-testimonial-5-ig-fb-banned-recovered-1.mp4",
+      poster: ""
+    },
+    {
+      name: "Suspended CES Resolved",
+      url: "https://www.ig-hero.com/wp-content/uploads/2026/04/customer-testimonial-6-ig-suspended-ces-resolved.mp4",
+      poster: ""
+    },
   ];
 
   return (
