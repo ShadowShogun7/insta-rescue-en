@@ -1,6 +1,8 @@
 {
   "rewrites": [
     { "source": "/us/assets/:path*", "destination": "/assets/:path*" },
+    { "source": "/us/instagram-recovery-guide", "destination": "/instagram-recovery-guide.html" },
+    { "source": "/us/instagram-recovery-guide/", "destination": "/instagram-recovery-guide.html" },
     { "source": "/us", "destination": "/index.html" },
     { "source": "/us/", "destination": "/index.html" },
     { "source": "/us/:path*", "destination": "/index.html" }
